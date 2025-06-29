@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c919f25e-9296-42d5-be38-c41296603468" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/interlex_db.evbNgA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/interlex_db.evbNgA/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/interlex_db.evbNgA/schema/information_schema.FNRwLQ.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/interlex_db.evbNgA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/interlex_db.evbNgA/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/interlex_db.evbNgA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/interlex_db.evbNgA/schema/public.abK9xQ.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/postgres.edMnLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/InterlexApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/config/EmailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/controller/ContactController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/controller/LawyerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/dto/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/dto/ContactMessageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/dto/LawyerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/entity/ContactMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/entity/Lawyer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/entity/MessageResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/entity/NotificationSetting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/entity/SystemSetting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/exeption/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/exeption/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/repo/ContactMessageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/repo/LawyerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/repo/MessageResponseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/repo/NotificationSettingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/repo/SystemSettingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/service/ContactMessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/service/LawyerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/service/NotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-security.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/uz/pdp/interlex/InterlexApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application-security.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/InterlexApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/config/EmailConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/config/WebConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/controller/ContactController$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/controller/ContactController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/controller/LawyerController$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/controller/LawyerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/dto/ApiResponse$ApiResponseBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/dto/ApiResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/dto/ContactMessageDto$ContactMessageDtoBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/dto/ContactMessageDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/dto/LawyerDto$LawyerDtoBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/dto/LawyerDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/ContactMessage$ClientType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/ContactMessage$ContactMessageBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/ContactMessage$MessageStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/ContactMessage$ServiceType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/ContactMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/Lawyer$LawyerBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/Lawyer$LawyerStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/Lawyer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/MessageResponse$MessageResponseBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/MessageResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/NotificationSetting$NotificationSettingBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/NotificationSetting.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/SystemSetting$SystemSettingBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/SystemSetting.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/exeption/GlobalExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/exeption/ResourceNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/repo/ContactMessageRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/repo/LawyerRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/repo/MessageResponseRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/repo/NotificationSettingRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/repo/SystemSettingRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/service/ContactMessageService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/service/EmailService$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/service/EmailService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/service/LawyerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/service/NotificationService.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="com.intellij.jpb.JpaRepository" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="8de53915" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Mavlon03&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Mavlon03/Interlex.git&quot;,
+    &quot;accountId&quot;: &quot;b3c22ec0-99f1-4159-8cd2-a49a480173cb&quot;
+  }
+}</component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2yYZmpEqxyM1QAUlRX9768Gts1D" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Maven.Interlex [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Interlex [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Interlex [package].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.InterlexApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;LawyerNew&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mavlon/IdeaProjects/Interlex/src/main/resources/static&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/Mavlon/AppData/Roaming/JetBrains/IntelliJIdea2024.3/node/versions/22.16.0/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.4.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mavlon\IdeaProjects\Interlex\src\main\resources\static" />
+      <recent name="C:\Users\Mavlon\IdeaProjects\Interlex" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mavlon\IdeaProjects\Interlex\src\main\resources\static" />
+      <recent name="C:\Users\Mavlon\IdeaProjects\Interlex\Frontend\js" />
+      <recent name="C:\Users\Mavlon\IdeaProjects\Interlex\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="InterlexApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Interlex" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="uz.pdp.interlex.InterlexApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c919f25e-9296-42d5-be38-c41296603468" name="Changes" comment="" />
+      <created>1750013628921</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750013628921</updated>
+      <workItem from="1750013630416" duration="336000" />
+      <workItem from="1750046006502" duration="14000" />
+      <workItem from="1750094185983" duration="3513000" />
+      <workItem from="1750132657302" duration="39000" />
+      <workItem from="1750269661095" duration="5456000" />
+      <workItem from="1750305993879" duration="64000" />
+      <workItem from="1750332577717" duration="5191000" />
+      <workItem from="1750393549289" duration="38000" />
+      <workItem from="1750396674567" duration="2275000" />
+      <workItem from="1750446784478" duration="1053000" />
+      <workItem from="1750480452592" duration="9000" />
+      <workItem from="1750481247661" duration="615000" />
+      <workItem from="1750701675150" duration="1550000" />
+      <workItem from="1750737584984" duration="5757000" />
+      <workItem from="1750754644831" duration="986000" />
+      <workItem from="1750755656495" duration="698000" />
+      <workItem from="1750770271451" duration="648000" />
+      <workItem from="1750770939228" duration="376000" />
+      <workItem from="1750776866389" duration="2457000" />
+      <workItem from="1750780605898" duration="5425000" />
+      <workItem from="1750823435991" duration="6000" />
+      <workItem from="1750857934805" duration="2504000" />
+      <workItem from="1750883718211" duration="14870000" />
+      <workItem from="1750935510667" duration="769000" />
+      <workItem from="1751137059857" duration="10942000" />
+      <workItem from="1751184059193" duration="455000" />
+      <workItem from="1751184777159" duration="3520000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="mavlon" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

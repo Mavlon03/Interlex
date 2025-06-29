@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="page.title">INTERLEX - Professional Yuridik Xizmatlar | Toshkent</title>
+  <meta name="description" data-i18n="page.description" content="INTERLEX - Uzbekistondagi eng yaxshi yuridik xizmatlar. Professional advokatlar, korporativ huquq, fuqarolik huquqi va boshqa yuridik masalalar bo'yicha yordam.">
+  <meta name="keywords" content="yuridik xizmatlar, advokat, huquq, Toshkent, Interlex, korporativ huquq, fuqarolik huquqi">
+  <meta name="author" content="INTERLEX Law Firm">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://interlex.uz/">
+  <meta property="og:title" data-i18n="page.title" content="INTERLEX - Professional Yuridik Xizmatlar">
+  <meta property="og:description" data-i18n="page.description" content="Uzbekistondagi eng yaxshi yuridik xizmatlar. Professional advokatlar va huquqiy yordam.">
+  <meta property="og:image" content="/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://interlex.uz/">
+  <meta property="twitter:title" data-i18n="page.title" content="INTERLEX - Professional Yuridik Xizmatlar">
+  <meta property="twitter:description" data-i18n="page.description" content="Uzbekistondagi eng yaxshi yuridik xizmatlar. Professional advokatlar va huquqiy yordam.">
+  <meta property="twitter:image" content="/twitter-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- CSS Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Loading Screen -->
+<div class="loading-screen" id="loadingScreen">
+  <div class="loader"></div>
+  <div class="loading-text" data-i18n="loading.text">INTERLEX yuklanmoqda...</div>
+</div>
+
+<!-- Theme Toggle Button -->
+<button class="theme-toggle" id="themeToggle" title="Dark/Light Mode" aria-label="Toggle theme">
+  <i class="fas fa-moon" id="themeIcon"></i>
+</button>
+
+<!-- Scroll to Top Button -->
+<button class="scroll-top" id="scrollTop" data-i18n-title="scroll.top" title="Yuqoriga" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Top Contact Bar -->
+<div class="top-contact-bar">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <div class="d-flex flex-wrap gap-4 align-items-center">
+          <a href="mailto:info@interlex.uz" class="text-decoration-none">
+            <i class="fas fa-envelope me-2"></i>info@interlex.uz
+          </a>
+          <a href="tel:+998900081008" class="text-decoration-none">
+            <i class="fas fa-phone me-2"></i>+998 90 008-1-008
+          </a>
+          <a href="tel:+998712502125" class="text-decoration-none">
+            <i class="fas fa-mobile-alt me-2"></i>+998 71 250-21-25
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 text-end">
+        <div class="d-flex justify-content-end align-items-center gap-3">
+          <span class="small d-none d-md-inline" data-i18n="social.follow">Ijtimoiy tarmoqlar:</span>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="Telegram">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header class="main-header" id="mainHeader">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#home">
+        <div class="logo-icon floating">⚖️</div>
+        INTERLEX
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home" data-i18n="nav.home">Бош сахифа</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about" data-i18n="nav.about">Биз ҳақимизда</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.services">
+              Хизматлар
+            </a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header" data-i18n="services.general">Умумий хизматлар</h6></li>
+              <li><a class="dropdown-item" href="#services">
+                <i class="fas fa-building"></i><span data-i18n="services.corporate">Корпоратив ҳуқуқ</span>
+              </a></li>
+              <li><a class="dropdown-item" href="#services">
+                <i class="fas fa-users"></i><span data-i18n="services.civil">Фуқаролик ҳуқуқи</span>
+              </a></li>
+              <li><a class="dropdown-item" href="#services">
+                <i class="fas fa-gavel"></i><span data-i18n="services.criminal">Жиноят ҳуқуқи</span>
+              </a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><h6 class="dropdown-header" data-i18n="services.special">Махсус хизматлар</h6></li>
+              <li><a class="dropdown-item" href="#services">
+                <i class="fas fa-globe"></i><span data-i18n="services.international">Халқаро юридик хизмат</span>
+              </a></li>
+              <li><a class="dropdown-item" href="#services">
+                <i class="fas fa-user"></i><span data-i18n="services.individual">Жисмоний шахсларга ёрдам</span>
+              </a></li>
+              <li><a class="dropdown-item" href="#services">
+                <i class="fas fa-briefcase"></i><span data-i18n="services.legal">Юридик шахсларга ёрдам</span>
+              </a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.publications">
+              Нашрлар
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#useful-links">
+                <i class="fas fa-info-circle"></i><span data-i18n="publications.info">Фойдали маълумотлар</span>
+              </a></li>
+              <li><a class="dropdown-item" href="#useful-links">
+                <i class="fas fa-newspaper"></i><span data-i18n="publications.articles">Мақолалар</span>
+              </a></li>
+              <li><a class="dropdown-item" href="#useful-links">
+                <i class="fas fa-book"></i><span data-i18n="publications.laws">Қонунлар</span>
+              </a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#news" data-i18n="nav.news">Хабарлар</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact" data-i18n="nav.contact">Алоқа</a>
+          </li>
+          <li class="nav-item dropdown ms-2">
+            <a class="language-selector dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="currentLangSelector">
+              🇺🇿 УЗ
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#" data-lang="uz">🇺🇿 Ўзбекча</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="ru">🇷🇺 Русский</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="en">🇬🇧 English</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ms-3">
+            <a href="#contact" class="btn btn-gradient">
+              <i class="fas fa-paper-plane me-2"></i><span data-i18n="nav.apply">Ариза юбориш</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section" id="home">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <div class="hero-content" data-aos="fade-up">
+          <h1 class="hero-title" id="heroTitle" data-i18n="hero.title">Professional Yuridik Xizmatlar</h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            INTERLEX адвокатлик фирмаси ўз бизнесни ташкил етиш ва юритиш масалалари бўйича
+            юридик хизматларнинг кенг доирасини ўзбек, рус, инглиз тилларида таклиф етади.
+            Биз сизнинг ҳуқуқларингизни ҳимоя қилишда ишончли шерикингизмиз.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-outline-light btn-lg">
+              <i class="fas fa-phone me-2"></i><span data-i18n="hero.consultation">Бепул маслаҳат</span>
+            </a>
+            <a href="#services" class="btn btn-outline-light btn-lg">
+              <i class="fas fa-info-circle me-2"></i><span data-i18n="hero.services">Хизматлар</span>
+            </a>
+          </div>
+
+          <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+            <div class="hero-stat">
+              <span class="hero-stat-number" data-count="500">0</span>
+              <span class="hero-stat-label" data-i18n="stats.clients">Мижозлар</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number" data-count="15">0</span>
+              <span class="hero-stat-label" data-i18n="stats.experience">Йиллик тажриба</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number" data-count="98">0</span>
+              <span class="hero-stat-label" data-i18n="stats.success">Муваффақият %</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">24/7</span>
+              <span class="hero-stat-label" data-i18n="stats.service">Хизмат</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="section-title text-gradient" data-i18n="about.title">Биз ҳақимизда</h2>
+      <p class="section-subtitle" data-i18n="about.subtitle">
+        Адвокатлик фирмасининг алоҳида белгиларидан бири кўйилган мақсадлар устидан ягона жамоа бўлиб ишлаш,
+        хорижий тилларни билиш, мижозлар манфаатини тўлиқ ҳимоя қилиш ва уларнинг шахсий ҳамда тижорат
+        маълумотларини ошкор қилмаслик, универсаллик, шунингдек ишнинг янгича талқин қилинишидир.
+      </p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+        <span class="stat-number" data-count="10">0</span>
+        <div class="stat-label" data-i18n="about.lawyers">Адвокатлар</div>
+        <div class="stat-description" data-i18n="about.lawyers.desc">Профессионал адвокатлар жамоаси</div>
+      </div>
+
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+        <span class="stat-number" data-count="25">0</span>
+        <div class="stat-label" data-i18n="about.regular.clients">Бизнинг мижозлар</div>
+        <div class="stat-description" data-i18n="about.regular.clients.desc">Доимий ҳамкорлик қилувчи мижозлар</div>
+      </div>
+
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+        <span class="stat-number" data-count="150">0</span>
+        <div class="stat-label" data-i18n="about.successful.results">Муваффақиятли натижалар</div>
+        <div class="stat-description" data-i18n="about.successful.results.desc">Ечилган юридик масалалар</div>
+      </div>
+
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+        <span class="stat-number" data-count="15">0</span>
+        <div class="stat-label" data-i18n="about.work.experience">Иш тажрибаси</div>
+        <div class="stat-description" data-i18n="about.work.experience.desc">Йиллик профессионал тажриба</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="section-title" data-i18n="services.title">Хизматларимиз</h2>
+      <p class="section-subtitle" data-i18n="services.subtitle">
+        Биз юридик хизматларнинг кенг спектрини таклиф етамиз. Ҳар бир мижозга индивидуал ёндашув
+        ва профессионал ечимлар беришга ҳаракат қиламиз.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-icon">
+          <i class="fas fa-building"></i>
+        </div>
+        <h3 class="service-title" data-i18n="services.corporate.title">Корпоратив ҳуқуқ</h3>
+        <p class="service-description" data-i18n="services.corporate.desc">
+          Компанияларни ташкил етиш, корпоратив бошқарув, шартномалар тузиш ва бизнес жараёнларини
+          юридик жиҳатдан қўллаб-қувватлаш.
+        </p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i><span data-i18n="services.corporate.feat1">Компания ташкил етиш</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.corporate.feat2">Шартномалар тузиш</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.corporate.feat3">Корпоратив бошқарув</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.corporate.feat4">M&A операциялари</span></li>
+        </ul>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3 class="service-title" data-i18n="services.civil.title">Фуқаролик ҳуқуқи</h3>
+        <p class="service-description" data-i18n="services.civil.desc">
+          Фуқаролик ҳуқуқи соҳасидаги низолар, мулкий муносабатлар, шартномавий мажбуриятлар
+          ва бошқа фуқаролик ишлари.
+        </p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i><span data-i18n="services.civil.feat1">Мулкий низолар</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.civil.feat2">Шартномавий низолар</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.civil.feat3">Зарар қоплаш</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.civil.feat4">Мерос масалалари</span></li>
+        </ul>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-icon">
+          <i class="fas fa-gavel"></i>
+        </div>
+        <h3 class="service-title" data-i18n="services.criminal.title">Жиноят ҳуқуқи</h3>
+        <p class="service-description" data-i18n="services.criminal.desc">
+          Жиноят ишларида ҳимоя, жабрланувчиларнинг ҳуқуқларини ҳимоя қилиш ва жиноят
+          процессида юридик ёрдам кўрсатиш.
+        </p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i><span data-i18n="services.criminal.feat1">Жиноят ишларида ҳимоя</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.criminal.feat2">Жабрланувчилар ҳуқуқи</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.criminal.feat3">Апелляция шикоятлари</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.criminal.feat4">Юридик маслаҳат</span></li>
+        </ul>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3 class="service-title" data-i18n="services.family.title">Оила ҳуқуқи</h3>
+        <p class="service-description" data-i18n="services.family.desc">
+          Никоҳ ва ажрашиш масалалари, болаларнинг ҳуқуқлари, алимент тўлаш ва оилавий
+          низоларни ҳал қилиш.
+        </p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i><span data-i18n="services.family.feat1">Ажрашиш жараёни</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.family.feat2">Болалар ҳуқуқи</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.family.feat3">Алимент масалалари</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.family.feat4">Мулкни бўлиш</span></li>
+        </ul>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <h3 class="service-title" data-i18n="services.business.title">Бизнес ҳуқуқи</h3>
+        <p class="service-description" data-i18n="services.business.desc">
+          Тадбиркорлик фаолияти, лицензиялаш, рухсатнома олиш ва бизнес жараёнларини
+          юридик жиҳатдан қўллаб-қувватлаш.
+        </p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i><span data-i18n="services.business.feat1">Лицензия олиш</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.business.feat2">Рухсатномалар</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.business.feat3">Бизнес режалаштириш</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.business.feat4">Инвестиция ҳуқуқи</span></li>
+        </ul>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-icon">
+          <i class="fas fa-calculator"></i>
+        </div>
+        <h3 class="service-title" data-i18n="services.tax.title">Солиқ ҳуқуқи</h3>
+        <p class="service-description" data-i18n="services.tax.desc">
+          Солиқ қонунчилиги бўйича маслаҳат, солиқ низолари, солиқ текшируви ва
+          солиқ оптимизацияси масалалари.
+        </p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i><span data-i18n="services.tax.feat1">Солиқ маслаҳати</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.tax.feat2">Солиқ низолари</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.tax.feat3">Солиқ текшируви</span></li>
+          <li><i class="fas fa-check"></i><span data-i18n="services.tax.feat4">Солиқ оптимизацияси</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- News Section -->
+<section class="news-section" id="news">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="section-title text-gradient" data-i18n="news.title">Сўнгги хабарлар</h2>
+      <p class="section-subtitle" data-i18n="news.subtitle">
+        Юридик соҳадаги энг сўнгги янгиликлар ва қонунчилик ўзгаришлари ҳақида хабардор бўлинг
+      </p>
+    </div>
+
+    <div class="news-grid">
+      <article class="news-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="news-image">
+          <img src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=600" alt="News 1" loading="lazy">
+          <div class="news-date">
+            <span class="day">15</span>
+            <span class="month" data-i18n="news.month.dec">Дек</span>
+          </div>
+        </div>
+        <div class="news-content">
+          <div class="news-category" data-i18n="news.category.law">Қонунчилик</div>
+          <h3 class="news-title" data-i18n="news.1.title">Янги Фуқаролик кодексидаги ўзгаришлар</h3>
+          <p class="news-excerpt" data-i18n="news.1.excerpt">
+            2024 йилдан бошлаб амалга кирган янги Фуқаролик кодексидаги муҳим ўзгаришлар ва уларнинг амалий таъсири ҳақида батафсил маълумот.
+          </p>
+          <div class="news-meta">
+            <span class="news-author" data-i18n="news.author">Муаллиф: INTERLEX</span>
+            <a href="#" class="news-read-more" data-i18n="news.read.more">Батафсил ўқиш</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="news-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="news-image">
+          <img src="https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg?auto=compress&cs=tinysrgb&w=600" alt="News 2" loading="lazy">
+          <div class="news-date">
+            <span class="day">12</span>
+            <span class="month" data-i18n="news.month.dec">Дек</span>
+          </div>
+        </div>
+        <div class="news-content">
+          <div class="news-category" data-i18n="news.category.business">Бизнес</div>
+          <h3 class="news-title" data-i18n="news.2.title">Кичик бизнес учун солиқ имтиёзлари</h3>
+          <p class="news-excerpt" data-i18n="news.2.excerpt">
+            Кичик ва ўрта бизнес субъектлари учун янги солиқ имтиёзлари ва уларни қандай қўллаш мумкинлиги ҳақида маслаҳатлар.
+          </p>
+          <div class="news-meta">
+            <span class="news-author" data-i18n="news.author">Муаллиф: INTERLEX</span>
+            <a href="#" class="news-read-more" data-i18n="news.read.more">Батафсил ўқиш</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="news-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="news-image">
+          <img src="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=600" alt="News 3" loading="lazy">
+          <div class="news-date">
+            <span class="day">10</span>
+            <span class="month" data-i18n="news.month.dec">Дек</span>
+          </div>
+        </div>
+        <div class="news-content">
+          <div class="news-category" data-i18n="news.category.family">Оила ҳуқуқи</div>
+          <h3 class="news-title" data-i18n="news.3.title">Болалар ҳуқуқларини ҳимоя қилиш</h3>
+          <p class="news-excerpt" data-i18n="news.3.excerpt">
+            Оилавий низоларда болаларнинг манфаатларини ҳимоя қилишнинг янги механизмлари ва ота-оналарнинг ҳуқуқлари.
+          </p>
+          <div class="news-meta">
+            <span class="news-author" data-i18n="news.author">Муаллиф: INTERLEX</span>
+            <a href="#" class="news-read-more" data-i18n="news.read.more">Батафсил ўқиш</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="news-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="news-image">
+          <img src="https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg?auto=compress&cs=tinysrgb&w=600" alt="News 4" loading="lazy">
+          <div class="news-date">
+            <span class="day">08</span>
+            <span class="month" data-i18n="news.month.dec">Дек</span>
+          </div>
+        </div>
+        <div class="news-content">
+          <div class="news-category" data-i18n="news.category.international">Халқаро ҳуқуқ</div>
+          <h3 class="news-title" data-i18n="news.4.title">Халқаро шартномалар ва инвестициялар</h3>
+          <p class="news-excerpt" data-i18n="news.4.excerpt">
+            Ўзбекистонда хорижий инвестицияларни жалб қилиш ва халқаро шартномалар тузишдаги янги имкониятлар.
+          </p>
+          <div class="news-meta">
+            <span class="news-author" data-i18n="news.author">Муаллиф: INTERLEX</span>
+            <a href="#" class="news-read-more" data-i18n="news.read.more">Батафсил ўқиш</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="news-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="news-image">
+          <img src="https://images.pexels.com/photos/5668774/pexels-photo-5668774.jpeg?auto=compress&cs=tinysrgb&w=600" alt="News 5" loading="lazy">
+          <div class="news-date">
+            <span class="day">05</span>
+            <span class="month" data-i18n="news.month.dec">Дек</span>
+          </div>
+        </div>
+        <div class="news-content">
+          <div class="news-category" data-i18n="news.category.criminal">Жиноят ҳуқуқи</div>
+          <h3 class="news-title" data-i18n="news.5.title">Жиноят процессидаги ҳимоя ҳуқуқлари</h3>
+          <p class="news-excerpt" data-i18n="news.5.excerpt">
+            Жиноят ишларида айбланувчиларнинг ҳуқуқлари ва адвокатлик ҳимояси кўрсатишнинг самарали усуллари.
+          </p>
+          <div class="news-meta">
+            <span class="news-author" data-i18n="news.author">Муаллиф: INTERLEX</span>
+            <a href="#" class="news-read-more" data-i18n="news.read.more">Батафсил ўқиш</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="news-card" data-aos="fade-up" data-aos-delay="600">
+        <div class="news-image">
+          <img src="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=600" alt="News 6" loading="lazy">
+          <div class="news-date">
+            <span class="day">03</span>
+            <span class="month" data-i18n="news.month.dec">Дек</span>
+          </div>
+        </div>
+        <div class="news-content">
+          <div class="news-category" data-i18n="news.category.corporate">Корпоратив ҳуқуқ</div>
+          <h3 class="news-title" data-i18n="news.6.title">Акциядорлик жамиятларини бошқариш</h3>
+          <p class="news-excerpt" data-i18n="news.6.excerpt">
+            Акциядорлик жамиятларида корпоратив бошқарув принциплари ва акциядорлар ҳуқуқларини ҳимоя қилиш механизмлари.
+          </p>
+          <div class="news-meta">
+            <span class="news-author" data-i18n="news.author">Муаллиф: INTERLEX</span>
+            <a href="#" class="news-read-more" data-i18n="news.read.more">Батафсил ўқиш</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="text-center mt-5" data-aos="fade-up">
+      <a href="#" class="btn btn-primary btn-lg">
+        <i class="fas fa-newspaper me-2"></i><span data-i18n="news.view.all">Барча хабарларни кўриш</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Useful Links Section -->
+<section class="useful-links-section" id="useful-links">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="section-title text-gradient" data-i18n="links.title">Фойдали ҳаволалар</h2>
+      <p class="section-subtitle" data-i18n="links.subtitle">
+        Ўзбекистон Республикасининг расмий порталлари ва фойдали ресурслар
+      </p>
+    </div>
+
+    <div class="links-grid">
+      <a href="https://president.uz" class="link-card" data-aos="fade-up" data-aos-delay="100" target="_blank" rel="noopener">
+        <div class="link-icon">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-HxAIhrT2W99aFFQVBgRXqxq3FxXgph.png" alt="Prezident" style="width: 40px; height: 40px; object-fit: contain;">
+        </div>
+        <div class="link-title" data-i18n="links.president.title">Ўзбекистон Республикаси Президентининг</div>
+        <div class="link-description" data-i18n="links.president.desc">матбуот хизмати</div>
+      </a>
+
+      <a href="https://gov.uz" class="link-card" data-aos="fade-up" data-aos-delay="200" target="_blank" rel="noopener">
+        <div class="link-icon">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-HxAIhrT2W99aFFQVBgRXqxq3FxXgph.png" alt="Hukumat" style="width: 40px; height: 40px; object-fit: contain;">
+        </div>
+        <div class="link-title" data-i18n="links.government.title">Ўзбекистон Республикаси</div>
+        <div class="link-description" data-i18n="links.government.desc">ҳукумат портали</div>
+      </a>
+
+      <a href="https://parliament.gov.uz" class="link-card" data-aos="fade-up" data-aos-delay="300" target="_blank" rel="noopener">
+        <div class="link-icon">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-0aEZYAUu66SEf8lorGQ5IvVaQDHVl0.png" alt="Parlament" style="width: 40px; height: 40px; object-fit: contain;">
+        </div>
+        <div class="link-title" data-i18n="links.parliament.title">Ўзбекистон Республикаси Олий</div>
+        <div class="link-description" data-i18n="links.parliament.desc">Мажлиси Қонунчилик Палатаси</div>
+      </a>
+
+      <a href="https://senat.uz" class="link-card" data-aos="fade-up" data-aos-delay="400" target="_blank" rel="noopener">
+        <div class="link-icon">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-0aEZYAUu66SEf8lorGQ5IvVaQDHVl0.png" alt="Senat" style="width: 40px; height: 40px; object-fit: contain;">
+        </div>
+        <div class="link-title" data-i18n="links.senate.title">Ўзбекистон Республикаси Олий</div>
+        <div class="link-description" data-i18n="links.senate.desc">Мажлиси Сенати</div>
+      </a>
+
+      <a href="https://adliya.uz" class="link-card" data-aos="fade-up" data-aos-delay="500" target="_blank" rel="noopener">
+        <div class="link-icon">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-0aEZYAUu66SEf8lorGQ5IvVaQDHVl0.png" alt="Adliya" style="width: 40px; height: 40px; object-fit: contain;">
+        </div>
+        <div class="link-title" data-i18n="links.justice.title">Ўзбекистон Республикаси Адлия</div>
+        <div class="link-description" data-i18n="links.justice.desc">вазирлиги</div>
+      </a>
+
+      <a href="https://lex.uz" class="link-card" data-aos="fade-up" data-aos-delay="600" target="_blank" rel="noopener">
+        <div class="link-icon">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-0aEZYAUu66SEf8lorGQ5IvVaQDHVl0.png" alt="Lex" style="width: 40px; height: 40px; object-fit: contain;">
+        </div>
+        <div class="link-title" data-i18n="links.lex.title">Ўзбекистон Республикаси Қонун</div>
+        <div class="link-description" data-i18n="links.lex.desc">ҳужжатлари миллий базаси</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="section-title" data-i18n="contact.title">Бизга мурожаат қилинг</h2>
+      <p class="section-subtitle" data-i18n="contact.subtitle">
+        Юридик масалаларингизни ҳал қилиш учун бизнинг мутахассисларимиз билан боғланинг.
+        Биз сизга энг яхши ечимларни таклиф етамиз ва профессионал ёрдам кўрсатамиз.
+      </p>
+    </div>
+
+    <div class="row g-5">
+      <!-- Contact Form -->
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="contact-form-card">
+          <h3 class="font-display mb-4">
+            <i class="fas fa-edit me-3 text-primary"></i>
+            <span data-i18n="contact.form.title">Хабар қолдириш формаси</span>
+          </h3>
+
+          <!-- Success/Error Messages -->
+          <div id="successAlert" class="alert alert-success d-none" role="alert">
+            <i class="fas fa-check-circle me-2"></i>
+            <span data-i18n="contact.success">Хабарингиз муваффақиятли юборилди! Тез орада сиз билан боғланамиз.</span>
+          </div>
+
+          <div id="errorAlert" class="alert alert-danger d-none" role="alert">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            <span data-i18n="contact.error">Хабар юборишда хатолик юз берди. Илтимос, кейинроқ қайта уриниб кўринг.</span>
+          </div>
+
+          <form id="contactForm" novalidate>
+            <div class="row g-3">
+              <!-- Name -->
+              <div class="col-12">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="name" name="name" data-i18n-placeholder="form.name.placeholder" placeholder="Исмингиз" required>
+                  <label for="name"><i class="fas fa-user me-2"></i><span data-i18n="form.name">Исмингиз</span> *</label>
+                  <div class="invalid-feedback" data-i18n="form.name.required">Исм киритилиши шарт</div>
+                </div>
+              </div>
+
+              <!-- Email and Phone -->
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                  <label for="email"><i class="fas fa-envelope me-2"></i><span data-i18n="form.email">Email манзили</span> *</label>
+                  <div class="invalid-feedback" data-i18n="form.email.required">Тўғри email манзилини киритинг</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="tel" class="form-control" id="phone" name="phone" data-i18n-placeholder="form.phone.placeholder" placeholder="Телефон" required>
+                  <label for="phone"><i class="fas fa-phone me-2"></i><span data-i18n="form.phone">Телефон рақами</span> *</label>
+                  <div class="invalid-feedback" data-i18n="form.phone.required">Телефон рақами киритилиши шарт</div>
+                </div>
+              </div>
+
+              <!-- Service Type and Client Type -->
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <select class="form-select" id="serviceType" name="serviceType">
+                    <option value="" data-i18n="form.select">Танланг...</option>
+                    <option value="CORPORATE" data-i18n="services.corporate">Корпоратив ҳуқуқ</option>
+                    <option value="CIVIL" data-i18n="services.civil">Фуқаролик ҳуқуқи</option>
+                    <option value="CRIMINAL" data-i18n="services.criminal">Жиноят ҳуқуқи</option>
+                    <option value="FAMILY" data-i18n="services.family">Оила ҳуқуқи</option>
+                    <option value="BUSINESS" data-i18n="services.business">Бизнес ҳуқуқи</option>
+                    <option value="TAX" data-i18n="services.tax">Солиқ ҳуқуқи</option>
+                    <option value="INTERNATIONAL" data-i18n="services.international">Халқаро ҳуқуқ</option>
+                  </select>
+                  <label for="serviceType"><i class="fas fa-gavel me-2"></i><span data-i18n="form.service.type">Қандай ҳуқуқий ёрдам керак?</span></label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <select class="form-select" id="clientType" name="clientType">
+                    <option value="" data-i18n="form.select">Танланг...</option>
+                    <option value="INDIVIDUAL" data-i18n="form.client.individual">Жисмоний шахс</option>
+                    <option value="LEGAL_ENTITY" data-i18n="form.client.legal">Юридик шахс</option>
+                  </select>
+                  <label for="clientType"><i class="fas fa-users me-2"></i><span data-i18n="form.client.type">Мижоз тури</span></label>
+                </div>
+              </div>
+
+              <!-- Subject -->
+              <div class="col-12">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="subject" name="subject" data-i18n-placeholder="form.subject.placeholder" placeholder="Мавзу" required>
+                  <label for="subject"><i class="fas fa-tag me-2"></i><span data-i18n="form.subject">Хабар мавзуси</span> *</label>
+                  <div class="invalid-feedback" data-i18n="form.subject.required">Хабар мавзуси киритилиши шарт</div>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="col-12">
+                <div class="form-floating">
+                  <textarea class="form-control" id="message" name="message" style="height: 120px" data-i18n-placeholder="form.message.placeholder" placeholder="Хабарингиз" required></textarea>
+                  <label for="message"><i class="fas fa-comment me-2"></i><span data-i18n="form.message">Хабарингиз</span> *</label>
+                  <div class="invalid-feedback" data-i18n="form.message.required">Хабар матни киритилиши шарт</div>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="col-12">
+                <button type="submit" id="submitBtn" class="btn btn-primary btn-lg w-100">
+                  <i class="fas fa-paper-plane me-2"></i><span data-i18n="form.submit">Хабарни юбориш</span>
+                </button>
+                <small class="text-muted mt-2 d-block">
+                  <i class="fas fa-info-circle me-1"></i>
+                  <span data-i18n="form.required">* Мажбурий майдонлар</span>
+                </small>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="contact-info-card">
+          <h3 class="font-display mb-4">
+            <i class="fas fa-address-book me-3"></i>
+            <span data-i18n="contact.info.title">Алоқа маълумотлари</span>
+          </h3>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <h6 class="mb-1" data-i18n="contact.address.title">Манзилимиз</h6>
+              <p class="mb-0 opacity-75" data-i18n="contact.address">Тошкент ш., Яккасарой тумани, Ш.Руставели кўчаси, 116/2</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <h6 class="mb-1" data-i18n="contact.phone.title">Телефон</h6>
+              <p class="mb-0 opacity-75">+998 90 008-1-008</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div>
+              <h6 class="mb-1" data-i18n="contact.mobile.title">Мобил</h6>
+              <p class="mb-0 opacity-75">+998 71 250-21-25</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h6 class="mb-1">Email</h6>
+              <p class="mb-0 opacity-75">info@interlex.uz</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div>
+              <h6 class="mb-1" data-i18n="contact.hours.title">Иш вақти</h6>
+              <p class="mb-0 opacity-75" data-i18n="contact.hours">24/7 - Доимий хизмат</p>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-4" style="border-top: 1px solid rgba(255,255,255,0.2);">
+            <h6 class="mb-3">
+              <i class="fas fa-bolt me-2"></i>
+              <span data-i18n="contact.quick.title">Тезкор алоқа</span>
+            </h6>
+            <div class="d-flex gap-3 flex-wrap">
+              <a href="tel:+998900081008" class="btn btn-outline-light">
+                <i class="fas fa-phone me-2"></i><span data-i18n="contact.call">Қўнғироқ</span>
+              </a>
+              <a href="mailto:info@interlex.uz" class="btn btn-outline-light">
+                <i class="fas fa-envelope me-2"></i>Email
+              </a>
+              <a href="#" class="btn btn-outline-light">
+                <i class="fab fa-telegram me-2"></i>Telegram
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Company Info -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-section">
+          <h5>
+            <i class="fas fa-balance-scale me-2 text-primary"></i>
+            INTERLEX LAW FIRM
+          </h5>
+          <p class="mb-4" data-i18n="footer.company.desc">
+            «INTERLEX» адвокатлик фирмаси ўз бизнесни ташкил етиш ва юритиш масалалари бўйича
+            юридик хизматларнинг кенг доирасини ўзбек, рус, инглиз тилларида амалга оширишни таклиф етади.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="btn btn-outline-primary btn-sm" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="btn btn-outline-primary btn-sm" aria-label="Telegram">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#" class="btn btn-outline-primary btn-sm" aria-label="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="btn btn-outline-primary btn-sm" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6">
+        <div class="footer-section">
+          <h5 data-i18n="footer.links.title">Тезкор ҳаволалар</h5>
+          <ul class="footer-links">
+            <li><a href="#home" data-i18n="nav.home">Бош сахифа</a></li>
+            <li><a href="#about" data-i18n="nav.about">Биз ҳақимизда</a></li>
+            <li><a href="#services" data-i18n="nav.services">Хизматлар</a></li>
+            <li><a href="#useful-links" data-i18n="nav.links">Фойдали ҳаволалар</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Алоқа</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-section">
+          <h5 data-i18n="nav.services">Хизматлар</h5>
+          <ul class="footer-links">
+            <li><a href="#services" data-i18n="services.corporate">Корпоратив ҳуқуқ</a></li>
+            <li><a href="#services" data-i18n="services.civil">Фуқаролик ҳуқуқи</a></li>
+            <li><a href="#services" data-i18n="services.criminal">Жиноят ҳуқуқи</a></li>
+            <li><a href="#services" data-i18n="services.family">Оила ҳуқуқи</a></li>
+            <li><a href="#services" data-i18n="services.business">Бизнес ҳуқуқи</a></li>
+            <li><a href="#services" data-i18n="services.tax">Солиқ ҳуқуқи</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-section">
+          <h5 data-i18n="nav.contact">Алоқа</h5>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span data-i18n="contact.address">Тошкент ш., Яккасарой тумани, Ш.Руставели кўчаси, 116/2</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+998 90 008-1-008</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-mobile-alt"></i>
+            <span>+998 71 250-21-25</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@interlex.uz</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <span data-i18n="contact.hours">24/7 - Доимий хизмат</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-4" style="border-color: var(--border-color);">
+
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p class="mb-0">
+          <i class="fas fa-copyright me-1"></i>
+          <span id="currentYear"></span> <span data-i18n="footer.copyright">INTERLEX.UZ - Барча ҳуқуқлар ҳимояланган</span>
+        </p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <p class="mb-0">
+          <i class="fas fa-code me-1"></i>
+          <span data-i18n="footer.developed">Ишлаб чиқилди:</span> <a href="#" class="text-decoration-none text-primary">Professional Team</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", async function (e) {
+    e.preventDefault(); // sahifa reload bo'lishini oldini olamiz
+
+    // formadagi qiymatlarni olish
+    const data = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      serviceType: document.getElementById("serviceType").value,
+      clientType: document.getElementById("clientType").value,
+      subject: document.getElementById("subject").value,
+      message: document.getElementById("message").value,
+      langCode: "uz" // yoki navigator.language.substr(0, 2)
+    };
+
+    try {
+      const response = await fetch("http://localhost:8080/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        // Muvaffaqiyatli yuborildi
+        document.getElementById("successAlert").classList.remove("d-none");
+        document.getElementById("errorAlert").classList.add("d-none");
+        document.getElementById("contactForm").reset();
+      } else {
+        // Xatolik yuz berdi
+        document.getElementById("successAlert").classList.add("d-none");
+        document.getElementById("errorAlert").classList.remove("d-none");
+      }
+    } catch (error) {
+      console.error("Xatolik:", error);
+      document.getElementById("successAlert").classList.add("d-none");
+      document.getElementById("errorAlert").classList.remove("d-none");
+    }
+  });
+</script>
+
+</body>
+</html>
