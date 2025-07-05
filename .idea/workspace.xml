@@ -4,107 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c919f25e-9296-42d5-be38-c41296603468" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/interlex_db.evbNgA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/interlex_db.evbNgA/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/interlex_db.evbNgA/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/interlex_db.evbNgA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/interlex_db.evbNgA/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/interlex_db.evbNgA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/interlex_db.evbNgA/schema/public.abK9xQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/postgres.edMnLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a508381-25bd-4f3a-817a-a5ea023f5921/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/InterlexApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/config/EmailConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/controller/ContactController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/controller/LawyerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/dto/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/dto/ContactMessageDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/dto/LawyerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/entity/ContactMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/entity/Lawyer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/entity/MessageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/entity/NotificationSetting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/entity/SystemSetting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/exeption/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/exeption/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/repo/ContactMessageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/repo/LawyerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/repo/MessageResponseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/repo/NotificationSettingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/repo/SystemSettingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/service/ContactMessageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/service/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/service/LawyerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/service/NotificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-security.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/uz/pdp/interlex/InterlexApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application-security.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/InterlexApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/config/EmailConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/config/WebConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/controller/ContactController$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/controller/ContactController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/controller/LawyerController$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/controller/LawyerController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/dto/ApiResponse$ApiResponseBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/dto/ApiResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/dto/ContactMessageDto$ContactMessageDtoBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/dto/ContactMessageDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/dto/LawyerDto$LawyerDtoBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/dto/LawyerDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/ContactMessage$ClientType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/ContactMessage$ContactMessageBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/ContactMessage$MessageStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/ContactMessage$ServiceType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/ContactMessage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/Lawyer$LawyerBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/Lawyer$LawyerStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/Lawyer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/MessageResponse$MessageResponseBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/MessageResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/NotificationSetting$NotificationSettingBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/NotificationSetting.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/SystemSetting$SystemSettingBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/entity/SystemSetting.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/exeption/GlobalExceptionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/exeption/ResourceNotFoundException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/repo/ContactMessageRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/repo/LawyerRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/repo/MessageResponseRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/repo/NotificationSettingRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/repo/SystemSettingRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/service/ContactMessageService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/service/EmailService$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/service/EmailService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/service/LawyerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/service/NotificationService.class" afterDir="false" />
+    <list default="true" id="c919f25e-9296-42d5-be38-c41296603468" name="Changes" comment="ended email">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Huquqiy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Lex.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Norma.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Qonunchilik palata.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/picture.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/i18n.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/i18n.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/config/WebConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,8 +37,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="com.intellij.jpb.JpaRepository" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -182,7 +104,7 @@
     &quot;Spring Boot.InterlexApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;LawyerNew&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mavlon/IdeaProjects/Interlex/src/main/resources/static&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mavlon/IdeaProjects/Interlex/src/main/resources/static/images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -204,6 +126,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mavlon\IdeaProjects\Interlex\src\main\resources\static\images" />
       <recent name="C:\Users\Mavlon\IdeaProjects\Interlex\src\main\resources\static" />
       <recent name="C:\Users\Mavlon\IdeaProjects\Interlex" />
     </key>
@@ -264,8 +187,31 @@
       <workItem from="1750935510667" duration="769000" />
       <workItem from="1751137059857" duration="10942000" />
       <workItem from="1751184059193" duration="455000" />
-      <workItem from="1751184777159" duration="3520000" />
+      <workItem from="1751184777159" duration="5177000" />
+      <workItem from="1751255963013" duration="11000" />
+      <workItem from="1751372349347" duration="2393000" />
+      <workItem from="1751375017201" duration="8000" />
+      <workItem from="1751384279668" duration="1598000" />
+      <workItem from="1751428967513" duration="34000" />
+      <workItem from="1751436537149" duration="640000" />
+      <workItem from="1751478965374" duration="343000" />
+      <workItem from="1751514655744" duration="2426000" />
+      <workItem from="1751562663064" duration="2409000" />
+      <workItem from="1751600924281" duration="1022000" />
+      <workItem from="1751648115643" duration="5632000" />
+      <workItem from="1751688211303" duration="703000" />
+      <workItem from="1751689861783" duration="1977000" />
+      <workItem from="1751714573143" duration="629000" />
     </task>
+    <task id="LOCAL-00001" summary="ended email">
+      <option name="closed" value="true" />
+      <created>1751193395714</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751193395714</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,6 +261,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ended email" />
+    <option name="LAST_COMMIT_MESSAGE" value="ended email" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

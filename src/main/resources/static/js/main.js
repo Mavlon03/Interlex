@@ -466,6 +466,7 @@ function initUtilityFunctions() {
     'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-0aEZYAUu66SEf8lorGQ5IvVaQDHVl0.png'
   ];
 
+
   criticalImages.forEach(src => {
     const img = new Image();
     img.src = src;

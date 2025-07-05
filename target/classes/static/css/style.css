@@ -13,6 +13,23 @@
   --primary-900: #1e3a8a;
   --primary-950: #172554;
 
+  .link-icon.circle-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* or any suitable background */
+  }
+
+  .link-icon.circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   /* Neutral Colors */
   --neutral-50: #f8fafc;
   --neutral-100: #f1f5f9;
@@ -568,11 +585,11 @@ body {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
-
 /* ===== HERO SECTION ===== */
 .hero-section {
-  background: url("https://interpret-dreams-online.com/wp-content/uploads/2023/05/who.png") no-repeat center center;
+  background: url("../images/picture.jpg") no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
   color: var(--text-inverse);
   padding: 180px 0 120px;
   position: relative;
@@ -590,7 +607,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+  background: rgba(0, 0, 0, 0.4); /* Matnni yaxshi ko'rinishi uchun qora overlay */
+  z-index: 1;
 }
 
 .hero-section::after {
@@ -601,13 +619,13 @@ body {
   right: 0;
   bottom: 0;
   background: radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.2) 0%, transparent 50%);
+  z-index: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
 }
-
 .hero-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.5rem, 5vw, 4.5rem);

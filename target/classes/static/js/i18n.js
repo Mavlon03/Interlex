@@ -2,11 +2,11 @@
 const translations = {
     uz: {
         // Page meta
-        'page.title': 'INTERLEX - Professional Yuridik Xizmatlar | Toshkent',
-        'page.description': 'INTERLEX - Uzbekistondagi eng yaxshi yuridik xizmatlar. Professional advokatlar, korporativ huquq, fuqarolik huquqi va boshqa yuridik masalalar bo\'yicha yordam.',
+        'page.title': 'MaxLegal - Барча тоифадаги юридик хизматлар | Toshkent',
+        'page.description': 'MaxLegal - Uzbekistondagi eng yaxshi yuridik xizmatlar. Professional advokatlar, korporativ huquq, fuqarolik huquqi va boshqa yuridik masalalar bo\'yicha yordam.',
 
         // Loading
-        'loading.text': 'INTERLEX yuklanmoqda...',
+        'loading.text': 'MaxLegal yuklanmoqda...',
 
         // Scroll
         'scroll.top': 'Yuqoriga',
@@ -25,15 +25,15 @@ const translations = {
         'nav.apply': 'Ариза юбориш',
 
         // Hero section
-        'hero.title': 'Professional Yuridik Xizmatlar',
-        'hero.subtitle': 'INTERLEX адвокатлик фирмаси ўз бизнесни ташкил етиш ва юритиш масалалари бўйича юридик хизматларнинг кенг доирасини ўзбек, рус, инглиз тилларида таклиф етади. Биз сизнинг ҳуқуқларингизни ҳимоя қилишда ишончли шерикингизмиз.',
+        'hero.title': 'Барча тоифадаги юридик хизматлар',
+        'hero.subtitle': '“MAXLEGAL” адвокатлик фирмаси тадбиркор ва фуқароларга ҳуқуқий масалада маслаҳат беради, уларнинг ҳуқуқ ва манфаатларини судларда ишончли ҳимоя қилади. Биз сизга барча йўналишларда профессионал даражада ҳуқуқий ёрдам берамиз.',
         'hero.consultation': 'Бепул маслаҳат',
         'hero.services': 'Хизматлар',
 
         // Stats
         'stats.clients': 'Мижозлар',
         'stats.experience': 'Йиллик тажриба',
-        'stats.success': 'Муваффақият %',
+        'stats.success': 'Ҳамкор ташкилотлар ва компаниялар',
         'stats.service': 'Хизмат',
 
         // About section
@@ -63,48 +63,33 @@ const translations = {
         'services.individual': 'Жисмоний шахсларга ёрдам',
         'services.legal': 'Юридик шахсларга ёрдам',
 
-        // Service details
-        'services.corporate.title': 'Корпоратив ҳуқуқ',
-        'services.corporate.desc': 'Компанияларни ташкил етиш, корпоратив бошқарув, шартномалар тузиш ва бизнес жараёнларини юридик жиҳатдан қўллаб-қувватлаш.',
-        'services.corporate.feat1': 'Компания ташкил етиш',
-        'services.corporate.feat2': 'Шартномалар тузиш',
-        'services.corporate.feat3': 'Корпоратив бошқарув',
-        'services.corporate.feat4': 'M&A операциялари',
+        "services.title": "Хизматларимиз",
+        "services.subtitle": "Ҳар қандай масаладаги ҳуқуқий маслаҳатлар",
 
-        'services.civil.title': 'Фуқаролик ҳуқуқи',
-        'services.civil.desc': 'Фуқаролик ҳуқуқи соҳасидаги низолар, мулкий муносабатлар, шартномавий мажбуриятлар ва бошқа фуқаролик ишлари.',
-        'services.civil.feat1': 'Мулкий низолар',
-        'services.civil.feat2': 'Шартномавий низолар',
-        'services.civil.feat3': 'Зарар қоплаш',
-        'services.civil.feat4': 'Мерос масалалари',
+        "services.advice.title": "Ҳар қандай ҳуқуқий маслаҳатлар",
+        "services.advice.desc": "Шахсий ёки бизнесингиз билан боғлиқ ҳар қандай ҳуқуқий масалада профессионал даражада маслаҳат берамиз. Телефон, электрон почта орқали мурожаат қилинг ёки фирмамизга ташриф буюринг.",
 
-        'services.criminal.title': 'Жиноят ҳуқуқи',
-        'services.criminal.desc': 'Жиноят ишларида ҳимоя, жабрланувчиларнинг ҳуқуқларини ҳимоя қилиш ва жиноят процессида юридик ёрдам кўрсатиш.',
-        'services.criminal.feat1': 'Жиноят ишларида ҳимоя',
-        'services.criminal.feat2': 'Жабрланувчилар ҳуқуқи',
-        'services.criminal.feat3': 'Апелляция шикоятлари',
-        'services.criminal.feat4': 'Юридик маслаҳат',
+        "services.litigation.title": "Суд ишларида ҳимоя ва вакиллик",
+        "services.litigation.desc": "Фуқаролик, жиноят, маъмурий ва иқтисодий суд ишларида манфаатларингизни ҳимоя қиламиз.",
 
-        'services.family.title': 'Оила ҳуқуқи',
-        'services.family.desc': 'Никоҳ ва ажрашиш масалалари, болаларнинг ҳуқуқлари, алимент тўлаш ва оилавий низоларни ҳал қилиш.',
-        'services.family.feat1': 'Ажрашиш жараёни',
-        'services.family.feat2': 'Болалар ҳуқуқи',
-        'services.family.feat3': 'Алимент масалалари',
-        'services.family.feat4': 'Мулкни бўлиш',
+        "services.contracts.title": "Шартномалар тузиш ва текшириш",
+        "services.contracts.desc": "Тадбиркорлик ва бошқа фаолиятларга оид шартномаларни тайёрлаймиз ҳамда ҳуқуқий жиҳатдан текширамиз.",
 
-        'services.business.title': 'Бизнес ҳуқуқи',
-        'services.business.desc': 'Тадбиркорлик фаолияти, лицензиялаш, рухсатнома олиш ва бизнес жараёнларини юридик жиҳатдан қўллаб-қувватлаш.',
-        'services.business.feat1': 'Лицензия олиш',
-        'services.business.feat2': 'Рухсатномалар',
-        'services.business.feat3': 'Бизнес режалаштириш',
-        'services.business.feat4': 'Инвестиция ҳуқуқи',
+        "services.property.title": "Мулк масалалари",
+        "services.property.desc": "Уй-жой, ер, мерос каби мулкий масалаларда ҳуқуқий ёрдам берамиз.",
 
-        'services.tax.title': 'Солиқ ҳуқуқи',
-        'services.tax.desc': 'Солиқ қонунчилиги бўйича маслаҳат, солиқ низолари, солиқ текшируви ва солиқ оптимизацияси масалалари.',
-        'services.tax.feat1': 'Солиқ маслаҳати',
-        'services.tax.feat2': 'Солиқ низолари',
-        'services.tax.feat3': 'Солиқ текшируви',
-        'services.tax.feat4': 'Солиқ оптимизацияси',
+        "services.family.title": "Оилавий низолар",
+        "services.family.desc": "Никоҳ, ажрашиш, алимент, бола васийлиги каби масалаларда кўмак кўрсатамиз. Махфийлик кафолатланади.",
+
+        "services.business.title": "Бизнес ҳуқуқий ёрдами",
+        "services.business.desc": "Ташкилотлар учун шартнома, солиқ, лицензия ва меҳнат ҳуқуқи бўйича доимий хизматлар.",
+
+        "services.labor.title": "Меҳнат муносабатлари",
+        "services.labor.desc": "Ишдан бўшатиш, маош ундириш каби меҳнат низолари бўйича ҳуқуқларингизни тиклашга ёрдам берамиз.",
+
+        "services.mediation.title": "Профессионал медиаторлик",
+        "services.mediation.desc": "Низоларни ҳал қилишда судгача, судда ва ижрода медиаторлик хизматини таклиф қиламиз.",
+
 
         // News section
         'news.title': 'Сўнгги хабарлар',
@@ -116,7 +101,7 @@ const translations = {
         'news.category.international': 'Халқаро ҳуқуқ',
         'news.category.criminal': 'Жиноят ҳуқуқи',
         'news.category.corporate': 'Корпоратив ҳуқуқ',
-        'news.author': 'Муаллиф: INTERLEX',
+        'news.author': 'Муаллиф: MaxLegal',
         'news.read.more': 'Батафсил ўқиш',
         'news.view.all': 'Барча хабарларни кўриш',
 
@@ -139,20 +124,22 @@ const translations = {
         'publications.laws': 'Қонунлар',
 
         // Useful links
-        'links.title': 'Фойдали ҳаволалар',
-        'links.subtitle': 'Ўзбекистон Республикасининг расмий порталлари ва фойдали ресурслар',
-        'links.president.title': 'Ўзбекистон Республикаси Президентининг',
-        'links.president.desc': 'матбуот хизмати',
-        'links.government.title': 'Ўзбекистон Республикаси',
-        'links.government.desc': 'ҳукумат портали',
-        'links.parliament.title': 'Ўзбекистон Республикаси Олий',
-        'links.parliament.desc': 'Мажлиси Қонунчилик Палатаси',
-        'links.senate.title': 'Ўзбекистон Республикаси Олий',
-        'links.senate.desc': 'Мажлиси Сенати',
-        'links.justice.title': 'Ўзбекистон Республикаси Адлия',
-        'links.justice.desc': 'вазирлиги',
-        'links.lex.title': 'Ўзбекистон Республикаси Қонун',
-        'links.lex.desc': 'ҳужжатлари миллий базаси',
+        'links.title.uz': 'Фойдали ҳаволалар',
+        'links.subtitle.uz': 'Ўзбекистон Республикасининг расмий порталлари ва фойдали ресурслари',
+        'links.president.title.uz': 'Ўзбекистон Республикаси Президенти',
+        'links.president.desc.uz': 'Матбуот хизмати',
+        'links.government.title.uz': 'Ўзбекистон Республикаси',
+        'links.government.desc.uz': 'Ҳукумат портали',
+        'links.parliament.title.uz': 'Ўзбекистон Республикаси Олий Мажлиси',
+        'links.parliament.desc.uz': 'Қонунчилик палатаси',
+        'links.senate.title.uz': 'Ўзбекистон Республикаси Олий Мажлиси',
+        'links.senate.desc.uz': 'Сенат',
+        'links.justice.title.uz': 'Адлия вазирлиги',
+        'links.justice.desc.uz': 'Ўзбекистон Республикаси',
+        'links.lex.title.uz': 'Қонунчилик маълумотлари миллий базаси',
+        'links.lex.desc.uz': 'Ҳуқуқий ҳужжатлар маълумотлари базаси',
+        'links.norma.title.uz': 'Ахборот-ҳуқуқий портал',
+        'links.norma.desc.uz': 'Норматив-ҳуқуқий ахборот сайти',
 
         // Contact
         'contact.title': 'Бизга мурожаат қилинг',
@@ -194,19 +181,19 @@ const translations = {
         'form.required': '* Мажбурий майдонлар',
 
         // Footer
-        'footer.company.desc': '«INTERLEX» адвокатлик фирмаси ўз бизнесни ташкил етиш ва юритиш масалалари бўйича юридик хизматларнинг кенг доирасини ўзбек, рус, инглиз тилларида амалга оширишни таклиф етади.',
+        'footer.company.desc': '«MaxLegal» адвокатлик фирмаси ўз бизнесни ташкил етиш ва юритиш масалалари бўйича юридик хизматларнинг кенг доирасини ўзбек, рус, инглиз тилларида амалга оширишни таклиф етади.',
         'footer.links.title': 'Тезкор ҳаволалар',
-        'footer.copyright': 'INTERLEX.UZ - Барча ҳуқуқлар ҳимояланган',
+        'footer.copyright': 'MaxLegal.UZ - Барча ҳуқуқлар ҳимояланган',
         'footer.developed': 'Ишлаб чиқилди:'
     },
 
     ru: {
         // Page meta
-        'page.title': 'INTERLEX - Профессиональные юридические услуги | Ташкент',
-        'page.description': 'INTERLEX - лучшие юридические услуги в Узбекистане. Профессиональные адвокаты, корпоративное право, гражданское право и помощь по другим правовым вопросам.',
+        'page.title': 'MaxLegal - Профессиональные юридические услуги | Ташкент',
+        'page.description': 'MaxLegal - лучшие юридические услуги в Узбекистане. Профессиональные адвокаты, корпоративное право, гражданское право и помощь по другим правовым вопросам.',
 
         // Loading
-        'loading.text': 'INTERLEX загружается...',
+        'loading.text': 'MaxLegal загружается...',
 
         // Scroll
         'scroll.top': 'Наверх',
@@ -225,15 +212,15 @@ const translations = {
         'nav.apply': 'Подать заявку',
 
         // Hero section
-        'hero.title': 'Профессиональные юридические услуги',
-        'hero.subtitle': 'Адвокатская фирма INTERLEX предлагает широкий спектр юридических услуг по организации и ведению бизнеса на узбекском, русском и английском языках. Мы ваш надежный партнер в защите ваших прав.',
+        'hero.title': 'Юридические услуги всех категорий',
+        'hero.subtitle': 'Адвокатская фирма “MAXLEGAL” предоставляет юридические консультации предпринимателям и гражданам, а также надежно защищает их права и интересы в судах. Мы оказываем профессиональную правовую помощь по всем направлениям.',
         'hero.consultation': 'Бесплатная консультация',
         'hero.services': 'Услуги',
 
         // Stats
         'stats.clients': 'Клиентов',
         'stats.experience': 'Лет опыта',
-        'stats.success': 'Успех %',
+        'stats.success': 'Партнёрские организации и компании',
         'stats.service': 'Сервис',
 
         // About section
@@ -249,62 +236,32 @@ const translations = {
         'about.work.experience.desc': 'Лет профессионального опыта',
 
         // Services
-        'services.title': 'Наши услуги',
-        'services.subtitle': 'Мы предлагаем широкий спектр юридических услуг. Стремимся предоставить индивидуальный подход и профессиональные решения каждому клиенту.',
-        'services.general': 'Общие услуги',
-        'services.special': 'Специальные услуги',
-        'services.corporate': 'Корпоративное право',
-        'services.civil': 'Гражданское право',
-        'services.criminal': 'Уголовное право',
-        'services.family': 'Семейное право',
-        'services.business': 'Бизнес право',
-        'services.tax': 'Налоговое право',
-        'services.international': 'Международная юридическая помощь',
-        'services.individual': 'Помощь физическим лицам',
-        'services.legal': 'Помощь юридическим лицам',
+        "services.title": "Наши услуги",
+        "services.subtitle": "Юридические консультации по любым вопросам",
 
-        // Service details
-        'services.corporate.title': 'Корпоративное право',
-        'services.corporate.desc': 'Создание компаний, корпоративное управление, составление договоров и юридическая поддержка бизнес-процессов.',
-        'services.corporate.feat1': 'Создание компаний',
-        'services.corporate.feat2': 'Составление договоров',
-        'services.corporate.feat3': 'Корпоративное управление',
-        'services.corporate.feat4': 'M&A операции',
+        "services.advice.title": "Любые юридические консультации",
+        "services.advice.desc": "Мы предоставляем профессиональные юридические консультации по вопросам, связанным с личной жизнью и бизнесом. Обращайтесь по телефону, электронной почте или посетите наш офис.",
 
-        'services.civil.title': 'Гражданское право',
-        'services.civil.desc': 'Споры в области гражданского права, имущественные отношения, договорные обязательства и другие гражданские дела.',
-        'services.civil.feat1': 'Имущественные споры',
-        'services.civil.feat2': 'Договорные споры',
-        'services.civil.feat3': 'Возмещение ущерба',
-        'services.civil.feat4': 'Наследственные вопросы',
+        "services.litigation.title": "Судебная защита и представительство",
+        "services.litigation.desc": "Защищаем ваши интересы в гражданских, уголовных, административных и экономических судах.",
 
-        'services.criminal.title': 'Уголовное право',
-        'services.criminal.desc': 'Защита по уголовным делам, защита прав потерпевших и оказание юридической помощи в уголовном процессе.',
-        'services.criminal.feat1': 'Защита по уголовным делам',
-        'services.criminal.feat2': 'Права потерпевших',
-        'services.criminal.feat3': 'Апелляционные жалобы',
-        'services.criminal.feat4': 'Юридические консультации',
+        "services.contracts.title": "Составление и проверка договоров",
+        "services.contracts.desc": "Подготавливаем и проверяем договоры, связанные с бизнесом и другими сферами.",
 
-        'services.family.title': 'Семейное право',
-        'services.family.desc': 'Вопросы брака и развода, права детей, алиментные обязательства и разрешение семейных споров.',
-        'services.family.feat1': 'Процедура развода',
-        'services.family.feat2': 'Права детей',
-        'services.family.feat3': 'Алиментные вопросы',
-        'services.family.feat4': 'Раздел имущества',
+        "services.property.title": "Имущественные вопросы",
+        "services.property.desc": "Помощь по вопросам недвижимости, наследства и другим имущественным делам.",
 
-        'services.business.title': 'Бизнес право',
-        'services.business.desc': 'Предпринимательская деятельность, лицензирование, получение разрешений и юридическая поддержка бизнес-процессов.',
-        'services.business.feat1': 'Получение лицензий',
-        'services.business.feat2': 'Разрешения',
-        'services.business.feat3': 'Бизнес планирование',
-        'services.business.feat4': 'Инвестиционное право',
+        "services.family.title": "Семейные споры",
+        "services.family.desc": "Юридическая помощь по вопросам брака, развода, алиментов и опеки. Конфиденциальность гарантирована.",
 
-        'services.tax.title': 'Налоговое право',
-        'services.tax.desc': 'Консультации по налоговому законодательству, налоговые споры, налоговые проверки и вопросы налоговой оптимизации.',
-        'services.tax.feat1': 'Налоговое консультирование',
-        'services.tax.feat2': 'Налоговые споры',
-        'services.tax.feat3': 'Налоговые проверки',
-        'services.tax.feat4': 'Налоговая оптимизация',
+        "services.business.title": "Юридическая помощь бизнесу",
+        "services.business.desc": "Постоянные юридические услуги для организаций по договорам, налогам, лицензиям и трудовому праву.",
+
+        "services.labor.title": "Трудовые отношения",
+        "services.labor.desc": "Помогаем восстановить права в спорах об увольнении, невыплате зарплаты и других вопросах.",
+
+        "services.mediation.title": "Профессиональное медиационное обслуживание",
+        "services.mediation.desc": "Предлагаем медиаторские услуги до суда, в суде и при исполнительном производстве.",
 
         // News section
         'news.title': 'Последние новости',
@@ -316,7 +273,7 @@ const translations = {
         'news.category.international': 'Международное право',
         'news.category.criminal': 'Уголовное право',
         'news.category.corporate': 'Корпоративное право',
-        'news.author': 'Автор: INTERLEX',
+        'news.author': 'Автор: MaxLegal',
         'news.read.more': 'Читать подробнее',
         'news.view.all': 'Посмотреть все новости',
 
@@ -339,20 +296,23 @@ const translations = {
         'publications.laws': 'Законы',
 
         // Useful links
-        'links.title': 'Полезные ссылки',
-        'links.subtitle': 'Официальные порталы Республики Узбекистан и полезные ресурсы',
-        'links.president.title': 'Пресс-служба Президента',
-        'links.president.desc': 'Республики Узбекистан',
-        'links.government.title': 'Республика Узбекистан',
-        'links.government.desc': 'правительственный портал',
-        'links.parliament.title': 'Олий Мажлис Республики Узбекистан',
-        'links.parliament.desc': 'Законодательная палата',
-        'links.senate.title': 'Олий Мажлис Республики Узбекистан',
-        'links.senate.desc': 'Сенат',
-        'links.justice.title': 'Министерство юстиции',
-        'links.justice.desc': 'Республики Узбекистан',
-        'links.lex.title': 'Национальная база правовых',
-        'links.lex.desc': 'документов Республики Узбекистан',
+        'links.title.ru': 'Полезные ссылки',
+        'links.subtitle.ru': 'Официальные порталы Республики Узбекистан и полезные ресурсы',
+        'links.president.title.ru': 'Пресс-служба Президента Республики Узбекистан',
+        'links.president.desc.ru': 'Новости и обращения',
+        'links.government.title.ru': 'Республика Узбекистан',
+        'links.government.desc.ru': 'Правительственный портал',
+        'links.parliament.title.ru': 'Олий Мажлис Республики Узбекистан',
+        'links.parliament.desc.ru': 'Законодательная палата',
+        'links.senate.title.ru': 'Олий Мажлис Республики Узбекистан',
+        'links.senate.desc.ru': 'Сенат',
+        'links.justice.title.ru': 'Министерство юстиции',
+        'links.justice.desc.ru': 'Республики Узбекистан',
+        'links.lex.title.ru': 'Национальная база правовых документов',
+        'links.lex.desc.ru': 'Правовая информация Узбекистана',
+        'links.norma.title.ru': 'Информационно-правовой портал',
+        'links.norma.desc.ru': 'Нормативно-правовая информация и база',
+
 
         // Contact
         'contact.title': 'Свяжитесь с нами',
@@ -394,19 +354,19 @@ const translations = {
         'form.required': '* Обязательные поля',
 
         // Footer
-        'footer.company.desc': 'Адвокатская фирма «INTERLEX» предлагает осуществление широкого спектра юридических услуг по организации и ведению бизнеса на узбекском, русском и английском языках.',
+        'footer.company.desc': 'Адвокатская фирма «MaxLegal» предлагает осуществление широкого спектра юридических услуг по организации и ведению бизнеса на узбекском, русском и английском языках.',
         'footer.links.title': 'Быстрые ссылки',
-        'footer.copyright': 'INTERLEX.UZ - Все права защищены',
+        'footer.copyright': 'MaxLegal.UZ - Все права защищены',
         'footer.developed': 'Разработано:'
     },
 
     en: {
         // Page meta
-        'page.title': 'INTERLEX - Professional Legal Services | Tashkent',
-        'page.description': 'INTERLEX - the best legal services in Uzbekistan. Professional lawyers, corporate law, civil law and assistance with other legal matters.',
+        'page.title': 'MaxLegal - Professional Legal Services | Tashkent',
+        'page.description': 'MaxLegal - the best legal services in Uzbekistan. Professional lawyers, corporate law, civil law and assistance with other legal matters.',
 
         // Loading
-        'loading.text': 'INTERLEX loading...',
+        'loading.text': 'MaxLegal loading...',
 
         // Scroll
         'scroll.top': 'To top',
@@ -425,15 +385,15 @@ const translations = {
         'nav.apply': 'Apply',
 
         // Hero section
-        'hero.title': 'Professional Legal Services',
-        'hero.subtitle': 'INTERLEX law firm offers a wide range of legal services for business organization and management in Uzbek, Russian, and English languages. We are your reliable partner in protecting your rights.',
+        'hero.title': 'Legal services of all categories',
+        'hero.subtitle': 'The law firm “MAXLEGAL” provides legal advice to entrepreneurs and individuals, and reliably protects their rights and interests in court. We offer professional legal assistance in all areas.',
         'hero.consultation': 'Free Consultation',
         'hero.services': 'Services',
 
         // Stats
         'stats.clients': 'Clients',
         'stats.experience': 'Years Experience',
-        'stats.success': 'Success %',
+        'stats.success': 'Partner Organizations and Companies',
         'stats.service': 'Service',
 
         // About section
@@ -449,62 +409,32 @@ const translations = {
         'about.work.experience.desc': 'Years of professional experience',
 
         // Services
-        'services.title': 'Our Services',
-        'services.subtitle': 'We offer a wide range of legal services. We strive to provide an individual approach and professional solutions to each client.',
-        'services.general': 'General Services',
-        'services.special': 'Special Services',
-        'services.corporate': 'Corporate Law',
-        'services.civil': 'Civil Law',
-        'services.criminal': 'Criminal Law',
-        'services.family': 'Family Law',
-        'services.business': 'Business Law',
-        'services.tax': 'Tax Law',
-        'services.international': 'International Legal Services',
-        'services.individual': 'Individual Assistance',
-        'services.legal': 'Legal Entity Assistance',
+        "services.title": "Our Services",
+        "services.subtitle": "Legal consultations on any matter",
 
-        // Service details
-        'services.corporate.title': 'Corporate Law',
-        'services.corporate.desc': 'Company formation, corporate governance, contract drafting and legal support of business processes.',
-        'services.corporate.feat1': 'Company Formation',
-        'services.corporate.feat2': 'Contract Drafting',
-        'services.corporate.feat3': 'Corporate Governance',
-        'services.corporate.feat4': 'M&A Operations',
+        "services.advice.title": "General Legal Consultations",
+        "services.advice.desc": "We offer professional legal advice for personal or business-related issues. Contact us by phone, email, or visit our office.",
 
-        'services.civil.title': 'Civil Law',
-        'services.civil.desc': 'Civil law disputes, property relations, contractual obligations and other civil matters.',
-        'services.civil.feat1': 'Property Disputes',
-        'services.civil.feat2': 'Contract Disputes',
-        'services.civil.feat3': 'Damage Compensation',
-        'services.civil.feat4': 'Inheritance Issues',
+        "services.litigation.title": "Court Protection and Representation",
+        "services.litigation.desc": "We defend your interests in civil, criminal, administrative, and economic court cases.",
 
-        'services.criminal.title': 'Criminal Law',
-        'services.criminal.desc': 'Defense in criminal cases, protection of victims\' rights and legal assistance in criminal proceedings.',
-        'services.criminal.feat1': 'Criminal Defense',
-        'services.criminal.feat2': 'Victims\' Rights',
-        'services.criminal.feat3': 'Appeal Complaints',
-        'services.criminal.feat4': 'Legal Consultation',
+        "services.contracts.title": "Contract Drafting and Review",
+        "services.contracts.desc": "We prepare and review contracts related to business and other activities from a legal perspective.",
 
-        'services.family.title': 'Family Law',
-        'services.family.desc': 'Marriage and divorce issues, children\'s rights, alimony payments and resolution of family disputes.',
-        'services.family.feat1': 'Divorce Proceedings',
-        'services.family.feat2': 'Children\'s Rights',
-        'services.family.feat3': 'Alimony Issues',
-        'services.family.feat4': 'Property Division',
+        "services.property.title": "Property Matters",
+        "services.property.desc": "We assist in real estate, inheritance, and other property-related legal matters.",
 
-        'services.business.title': 'Business Law',
-        'services.business.desc': 'Entrepreneurial activities, licensing, obtaining permits and legal support of business processes.',
-        'services.business.feat1': 'License Obtaining',
-        'services.business.feat2': 'Permits',
-        'services.business.feat3': 'Business Planning',
-        'services.business.feat4': 'Investment Law',
+        "services.family.title": "Family Disputes",
+        "services.family.desc": "We provide legal support in matters of marriage, divorce, alimony, and child custody. Confidentiality is guaranteed.",
 
-        'services.tax.title': 'Tax Law',
-        'services.tax.desc': 'Tax legislation consultation, tax disputes, tax audits and tax optimization issues.',
-        'services.tax.feat1': 'Tax Consultation',
-        'services.tax.feat2': 'Tax Disputes',
-        'services.tax.feat3': 'Tax Audits',
-        'services.tax.feat4': 'Tax Optimization',
+        "services.business.title": "Legal Support for Businesses",
+        "services.business.desc": "Ongoing legal support for businesses regarding contracts, taxes, licensing, and labor law.",
+
+        "services.labor.title": "Labor Relations",
+        "services.labor.desc": "We help restore your rights in cases of dismissal, wage recovery, and other labor disputes.",
+
+        "services.mediation.title": "Professional Mediation Service",
+        "services.mediation.desc": "We offer mediation services before, during, and after court proceedings.",
 
         // News section
         'news.title': 'Latest News',
@@ -516,7 +446,7 @@ const translations = {
         'news.category.international': 'International Law',
         'news.category.criminal': 'Criminal Law',
         'news.category.corporate': 'Corporate Law',
-        'news.author': 'Author: INTERLEX',
+        'news.author': 'Author: MaxLegal',
         'news.read.more': 'Read more',
         'news.view.all': 'View all news',
 
@@ -538,21 +468,24 @@ const translations = {
         'publications.articles': 'Articles',
         'publications.laws': 'Laws',
 
-        // Useful links
-        'links.title': 'Useful Links',
-        'links.subtitle': 'Official portals of the Republic of Uzbekistan and useful resources',
-        'links.president.title': 'Press Service of the President',
-        'links.president.desc': 'of the Republic of Uzbekistan',
-        'links.government.title': 'Republic of Uzbekistan',
-        'links.government.desc': 'government portal',
-        'links.parliament.title': 'Oliy Majlis of the Republic of Uzbekistan',
-        'links.parliament.desc': 'Legislative Chamber',
-        'links.senate.title': 'Oliy Majlis of the Republic of Uzbekistan',
-        'links.senate.desc': 'Senate',
-        'links.justice.title': 'Ministry of Justice',
-        'links.justice.desc': 'of the Republic of Uzbekistan',
-        'links.lex.title': 'National Database of Legal',
-        'links.lex.desc': 'Documents of the Republic of Uzbekistan',
+        // Useful links - English
+        'links.title.en': 'Useful Links',
+        'links.subtitle.en': 'Official portals of the Republic of Uzbekistan and helpful resources',
+        'links.president.title.en': 'President of the Republic of Uzbekistan',
+        'links.president.desc.en': 'Press service',
+        'links.government.title.en': 'Republic of Uzbekistan',
+        'links.government.desc.en': 'Government portal',
+        'links.parliament.title.en': 'Oliy Majlis of the Republic of Uzbekistan',
+        'links.parliament.desc.en': 'Legislative Chamber',
+        'links.senate.title.en': 'Oliy Majlis of the Republic of Uzbekistan',
+        'links.senate.desc.en': 'Senate',
+        'links.justice.title.en': 'Ministry of Justice',
+        'links.justice.desc.en': 'of the Republic of Uzbekistan',
+        'links.lex.title.en': 'National Legal Database',
+        'links.lex.desc.en': 'Legal information resources of Uzbekistan',
+        'links.norma.title.en': 'Legal Information Portal',
+        'links.norma.desc.en': 'Normative legal resource website',
+
 
         // Contact
         'contact.title': 'Contact Us',
@@ -594,9 +527,9 @@ const translations = {
         'form.required': '* Required fields',
 
         // Footer
-        'footer.company.desc': 'INTERLEX law firm offers a wide range of legal services for business organization and management in Uzbek, Russian, and English languages.',
+        'footer.company.desc': 'MaxLegal law firm offers a wide range of legal services for business organization and management in Uzbek, Russian, and English languages.',
         'footer.links.title': 'Quick Links',
-        'footer.copyright': 'INTERLEX.UZ - All rights reserved',
+        'footer.copyright': 'MaxLegal.UZ - All rights reserved',
         'footer.developed': 'Developed by:'
     }
 };
