@@ -22,7 +22,7 @@ public class EmailService {
 
     private final JavaMailSender mailSender;
 
-    @Value("${spring.mail.username:info@interlex.uz}")
+    @Value("${spring.mail.username:maxlegal@bk.ru}")
     private String fromEmail;
 
     @Value("${app.admin.email:admin@interlex.uz}")
@@ -42,7 +42,7 @@ public class EmailService {
 
     public void sendNewMessageNotificationToAdmin(ContactMessage message) {
         try {
-            String subject = "Yangi xabar - INTERLEX";
+            String subject = "Yangi xabar - MAXLEGAL";
             String content = buildAdminNotificationContent(message);
 
             sendHtmlEmail(adminEmail, subject, content);
@@ -59,7 +59,7 @@ public class EmailService {
                 return;
             }
 
-            String subject = "Sizga yangi ish tayinlandi - INTERLEX";
+            String subject = "Sizga yangi ish tayinlandi - MAXLEGAL";
             String content = buildLawyerAssignmentContent(message, lawyer);
 
             sendHtmlEmail(lawyer.getEmail(), subject, content);
@@ -105,9 +105,9 @@ public class EmailService {
 
     private String getAutoResponseSubject(String langCode) {
         return switch (langCode != null ? langCode.toLowerCase() : "uz") {
-            case "ru" -> "Спасибо за обращение - INTERLEX";
-            case "en" -> "Thank you for contacting us - INTERLEX";
-            default -> "Murojaatingiz uchun rahmat - INTERLEX";
+            case "ru" -> "Спасибо за обращение - MAXLEGAL";
+            case "en" -> "Thank you for contacting us - MAXLEGAL";
+            default -> "Murojaatingiz uchun rahmat - MAXLEGAL";
         };
     }
 
@@ -132,7 +132,7 @@ public class EmailService {
                 default -> "Murojaat holati yangilandi";
             };
         };
-        return statusText + " - INTERLEX";
+        return statusText + " - MAXLEGAL";
     }
 
     private String buildAutoResponseContent(ContactMessage message) {
@@ -156,7 +156,7 @@ public class EmailService {
             <body>
                 <div class="container">
                     <div class="header">
-                        <h1>⚖️ INTERLEX</h1>
+                        <h1>⚖️ MAXLEGAL</h1>
                         <p>Professional Yuridik Xizmatlar</p>
                     </div>
                     <div class="content">
@@ -175,16 +175,16 @@ public class EmailService {
                         
                         <div class="contact-info">
                             <h4>📞 Tezkor aloqa:</h4>
-                            <p><strong>Telefon:</strong> +998 90 008-1-008</p>
-                            <p><strong>Mobil:</strong> +998 71 250-21-25</p>
-                            <p><strong>Email:</strong> info@interlex.uz</p>
+                            <p><strong>Telefon:</strong> +998933005005</p>
+                            <p><strong>Mobil:</strong> +998939998843</p>
+                            <p><strong>Email:</strong> maxlegal@bk.ru</p>
                             <p><strong>Manzil:</strong> Toshkent sh., Yakkasaroy tumani, Sh.Rustaveli ko'chasi, 116/2</p>
                         </div>
                         
                         <p><strong>Eslatma:</strong> Agar sizda qo'shimcha savollar bo'lsa, bizga bemalol murojaat qiling. Biz 24/7 xizmat ko'rsatamiz.</p>
                     </div>
                     <div class="footer">
-                        <p>© 2024 INTERLEX.UZ - Barcha huquqlar himoyalangan</p>
+                        <p>© 2024 MAXLEGAL.UZ - Barcha huquqlar himoyalangan</p>
                         <p>Bu avtomatik xabar. Iltimos, javob bermang.</p>
                     </div>
                 </div>
@@ -220,7 +220,7 @@ public class EmailService {
                 <div class="container">
                     <div class="header">
                         <h1>🚨 YANGI XABAR</h1>
-                        <p>INTERLEX Admin Panel</p>
+                        <p>MAXLEGAL Admin Panel</p>
                     </div>
                     <div class="content">
                         <div class="urgent">
@@ -241,7 +241,6 @@ public class EmailService {
                             <p><strong>Mavzu:</strong> %s</p>
                             <p><strong>Xizmat turi:</strong> %s</p>
                             <p><strong>Sana:</strong> %s</p>
-                            <p><strong>IP manzil:</strong> %s</p>
                         </div>
                         
                         <div class="info-box">
@@ -262,7 +261,6 @@ public class EmailService {
                 message.getSubject(),
                 message.getServiceType() != null ? message.getServiceType().getDisplayName() : "Ko'rsatilmagan",
                 message.getCreatedAt().format(formatter),
-                message.getClientIp() != null ? message.getClientIp() : "Noma'lum",
                 message.getMessage()
         );
     }
@@ -288,7 +286,7 @@ public class EmailService {
                 <div class="container">
                     <div class="header">
                         <h1>📋 YANGI ISH TAYINLANDI</h1>
-                        <p>INTERLEX - Advokat Panel</p>
+                        <p>MAXLEGAL - Advokat Panel</p>
                     </div>
                     <div class="content">
                         <h2>Hurmatli %s %s!</h2>
@@ -366,12 +364,11 @@ public class EmailService {
                 <div class="container">
                     <div class="header">
                         <h1>📊 HOLAT YANGILANDI</h1>
-                        <p>INTERLEX - Murojaat holati</p>
+                        <p>MAXLEGAL - Murojaat holati</p>
                     </div>
                     <div class="content">
                         <h2>Hurmatli %s!</h2>
-                        
-                        <div class="status-update">
+                              <div class="status-update">
                             <h3>✅ Murojaatingiz holati yangilandi!</h3>
                             <p><strong>Yangi holat:</strong> %s</p>
                             <p><strong>Yangilanish vaqti:</strong> %s</p>
@@ -388,8 +385,8 @@ public class EmailService {
                         
                         <div style="background: #e2e8f0; padding: 15px; border-radius: 8px; margin: 15px 0;">
                             <h4>📞 Aloqa ma'lumotlari:</h4>
-                            <p><strong>Telefon:</strong> +998 90 008-1-008</p>
-                            <p><strong>Email:</strong> info@interlex.uz</p>
+                            <p><strong>Telefon:</strong> +998933005005</p>
+                            <p><strong>Email:</strong> maxlegal@bk.ru</p>
                         </div>
                     </div>
                 </div>

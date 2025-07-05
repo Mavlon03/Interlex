@@ -4,29 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c919f25e-9296-42d5-be38-c41296603468" name="Changes" comment="ended email">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Huquqiy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Lex.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Norma.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Qonunchilik palata.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/picture.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+    <list default="true" id="c919f25e-9296-42d5-be38-c41296603468" name="Changes" comment="updated page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/i18n.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/interlex/service/EmailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/i18n.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uz/pdp/interlex/config/WebConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +182,7 @@
       <workItem from="1751648115643" duration="5632000" />
       <workItem from="1751688211303" duration="703000" />
       <workItem from="1751689861783" duration="1977000" />
-      <workItem from="1751714573143" duration="629000" />
+      <workItem from="1751714573143" duration="2601000" />
     </task>
     <task id="LOCAL-00001" summary="ended email">
       <option name="closed" value="true" />
@@ -211,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751193395714</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updated page">
+      <option name="closed" value="true" />
+      <created>1751715239920</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1751715239921</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +253,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ended email" />
-    <option name="LAST_COMMIT_MESSAGE" value="ended email" />
+    <MESSAGE value="updated page" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
