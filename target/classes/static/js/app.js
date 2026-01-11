@@ -475,24 +475,43 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Phone number formatting
+    // JavaScript qismi
     const phoneInput = document.getElementById('phone');
-    if (phoneInput) {
-      phoneInput.addEventListener('input', function() {
-        let value = this.value.replace(/\D/g, '');
 
-        if (value.startsWith('998')) {
-          value = '+' + value;
-        } else if (value.startsWith('99')) {
-          value = '+9' + value;
-        } else if (value.startsWith('9')) {
-          value = '+99' + value;
-        } else if (value.length > 0) {
-          value = '+998' + value;
+    if (phoneInput) {
+      // +998 bilan boshlanishini majburiy qilamiz
+      phoneInput.addEventListener('input', function () {
+        if (!this.value.startsWith('+998')) {
+          this.value = '+998';
         }
 
-        this.value = value;
+        // faqat raqamlar bo'lishi kerak (+998 dan keyingi qism)
+        let digits = this.value.replace(/\D/g, '');
+        if (digits.length > 12) {
+          // ortiqcha raqam kiritilmasligi uchun kesib olamiz
+          this.value = '+' + digits.substring(0, 12);
+        }
+      });
+
+      // kursorni +998 oldida harakatlantirishni bloklaymiz
+      phoneInput.addEventListener('keydown', function (e) {
+        const start = this.selectionStart;
+        if ((start <= 4) && (e.key === 'Backspace' || e.key === 'ArrowLeft')) {
+          e.preventDefault();
+          this.setSelectionRange(this.value.length, this.value.length);
+        }
+      });
+
+      // inputga bosilganda kursor +998 dan keyin turishini ta'minlaymiz
+      phoneInput.addEventListener('focus', function () {
+        setTimeout(() => {
+          if (this.selectionStart < 4) {
+            this.setSelectionRange(this.value.length, this.value.length);
+          }
+        }, 0);
       });
     }
+
   }
 
   // Smooth scrolling for navigation links

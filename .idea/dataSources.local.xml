@@ -10,7 +10,9 @@
       <user-name>postgres</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="database" qname="interlex_db">
+          <node kind="database">
+            <name qname="interlex_db" />
+            <name qname="interlex_local" />
             <node kind="schema" negative="1" />
           </node>
         </introspection-scope>

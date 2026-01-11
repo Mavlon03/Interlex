@@ -18,7 +18,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/lawyers")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*", maxAge = 3600)
 public class LawyerController {
 
     private final LawyerService lawyerService;
