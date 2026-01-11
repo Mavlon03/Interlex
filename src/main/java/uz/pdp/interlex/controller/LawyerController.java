@@ -48,9 +48,15 @@ public class LawyerController {
     }
 
     @GetMapping
-    public ResponseEntity<ApiResponse<List<Lawyer>>> getAllLawyers() {
+    public ResponseEntity<ApiResponse<List<Lawyer>>> getAllLawyers(@RequestParam(required = false) String email) {
         try {
-            List<Lawyer> lawyers = lawyerService.findAllActive();
+            List<Lawyer> lawyers;
+            if (email != null && !email.isBlank()) {
+                var opt = lawyerService.findByEmail(email);
+                lawyers = opt.map(List::of).orElse(List.of());
+            } else {
+                lawyers = lawyerService.findAllActive();
+            }
             return ResponseEntity.ok(ApiResponse.success("Advokatlar ro'yxati", lawyers));
         } catch (Exception e) {
             log.error("Error getting all lawyers", e);

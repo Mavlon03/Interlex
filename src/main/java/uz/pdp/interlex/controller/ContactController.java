@@ -27,6 +27,7 @@ import java.util.List;
 public class ContactController {
 
     private final ContactMessageService contactMessageService;
+    private final uz.pdp.interlex.service.LawyerService lawyerService;
 
     @PostMapping
     public ResponseEntity<ApiResponse<ContactMessage>> createContactMessage(
@@ -128,8 +129,36 @@ public class ContactController {
     @GetMapping("/lawyer/{lawyerId}")
     public ResponseEntity<ApiResponse<List<ContactMessage>>> getMessagesByLawyer(@PathVariable Long lawyerId) {
         try {
-            List<ContactMessage> messages = contactMessageService.findByLawyerId(lawyerId);
-            return ResponseEntity.ok(ApiResponse.success("Advokat xabarlari topildi", messages));
+            // Authorization: only admin or the lawyer himself can access
+            var auth = org.springframework.security.core.context.SecurityContextHolder.getContext().getAuthentication();
+            if (auth == null || !auth.isAuthenticated()) {
+                return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ApiResponse.error("Access denied"));
+            }
+
+            boolean isAdmin = auth.getAuthorities().stream()
+                    .anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"));
+
+            boolean isLawyer = auth.getAuthorities().stream()
+                    .anyMatch(a -> a.getAuthority().equals("ROLE_LAWYER"));
+
+            if (isAdmin) {
+                List<ContactMessage> messages = contactMessageService.findByLawyerId(lawyerId);
+                return ResponseEntity.ok(ApiResponse.success("Advokat xabarlari topildi", messages));
+            }
+
+            if (isLawyer) {
+                String username = auth.getName();
+                // Verify the requesting lawyer matches the lawyerId
+                var lawyerOpt = contactMessageService.findLawyerById(lawyerId);
+                if (lawyerOpt.isEmpty() || !username.equalsIgnoreCase(lawyerOpt.get().getEmail())) {
+                    return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ApiResponse.error("Access denied"));
+                }
+                List<ContactMessage> messages = contactMessageService.findByLawyerId(lawyerId);
+                return ResponseEntity.ok(ApiResponse.success("Advokat xabarlari topildi", messages));
+            }
+
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ApiResponse.error("Access denied"));
+
         } catch (Exception e) {
             log.error("Error getting messages by lawyer: {}", lawyerId, e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -144,8 +173,24 @@ public class ContactController {
 
         try {
             ContactMessage.MessageStatus messageStatus = ContactMessage.MessageStatus.valueOf(status.toUpperCase());
-            ContactMessage updatedMessage = contactMessageService.updateStatus(id, messageStatus);
-            return ResponseEntity.ok(ApiResponse.success("Xabar holati yangilandi", updatedMessage));
+
+            var auth = org.springframework.security.core.context.SecurityContextHolder.getContext().getAuthentication();
+            if (auth == null || !auth.isAuthenticated()) {
+                return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ApiResponse.error("Access denied"));
+            }
+
+            boolean isAdmin = auth.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"));
+            boolean isLawyer = auth.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_LAWYER"));
+
+            ContactMessage existing = contactMessageService.findById(id);
+
+            if (isAdmin || (isLawyer && existing.getAssignedLawyer() != null && existing.getAssignedLawyer().getId().equals(getAuthLawyerId(auth)))) {
+                ContactMessage updatedMessage = contactMessageService.updateStatus(id, messageStatus);
+                return ResponseEntity.ok(ApiResponse.success("Xabar holati yangilandi", updatedMessage));
+            } else {
+                return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ApiResponse.error("Access denied"));
+            }
+
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest()
                     .body(ApiResponse.error("Noto'g'ri status: " + status));
@@ -153,6 +198,16 @@ public class ContactController {
             log.error("Error updating message status: {}", id, e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(ApiResponse.error("Xabar holatini yangilashda xatolik yuz berdi"));
+        }
+    }
+
+    private Long getAuthLawyerId(org.springframework.security.core.Authentication auth) {
+        try {
+            String username = auth.getName();
+            var opt = lawyerService.findByEmail(username);
+            return opt.map(uz.pdp.interlex.entity.Lawyer::getId).orElse(null);
+        } catch (Exception e) {
+            return null;
         }
     }
 

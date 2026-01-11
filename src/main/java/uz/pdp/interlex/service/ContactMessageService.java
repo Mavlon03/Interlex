@@ -297,6 +297,14 @@ public class ContactMessageService {
         return contactMessageRepository.findByAssignedLawyerIdOrderByCreatedAtDesc(lawyerId);
     }
 
+    public java.util.Optional<Lawyer> findLawyerById(Long id) {
+        try {
+            return java.util.Optional.of(lawyerService.findById(id));
+        } catch (ResourceNotFoundException e) {
+            return java.util.Optional.empty();
+        }
+    }
+
     public Page<ContactMessage> searchMessages(String keyword, Pageable pageable) {
         return contactMessageRepository.searchMessages(keyword, pageable);
     }

@@ -231,7 +231,7 @@ function initContactForm() {
     };
 
     try {
-      const response = await axios.post('https://maxlegal.uz/api/contact', formData, {
+      const response = await axios.post('/api/contact', formData, {
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
