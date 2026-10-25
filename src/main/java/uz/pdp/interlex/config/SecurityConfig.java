@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -35,7 +35,17 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/api/contact").permitAll()
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
-                        .requestMatchers("/css/**", "/js/**", "/images/**", "/", "/index.html", "/lawyer.html").permitAll()
+                        .requestMatchers("/css/**", "/js/**", "/images/**", "/", "/index.html", "/lawyer.html", "/favicon.ico", "/icon.png", "/icon.svg", "/error").permitAll()
+                        // Faqat admin
+                        .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/api/contact/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/api/contact", "/api/contact/recent", "/api/contact/stats", "/api/contact/status/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/api/lawyers/stats").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/api/lawyers/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/api/lawyers/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/api/lawyers/**").hasRole("ADMIN")
+                        // Qolgan API: advokat (admin ham ROLE_LAWYER ga ega); obyekt darajasidagi tekshiruv controller'larda
+                        .requestMatchers("/api/**").hasRole("LAWYER")
                         .anyRequest().authenticated()
                 );
 
@@ -53,7 +63,6 @@ public class SecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        // For demo only - in production use BCryptPasswordEncoder
-        return NoOpPasswordEncoder.getInstance();
+        return new BCryptPasswordEncoder();
     }
 }

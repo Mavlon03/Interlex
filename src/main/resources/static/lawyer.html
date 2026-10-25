@@ -1,50 +1,93 @@
 <!DOCTYPE html>
 <html lang="uz" data-theme="light">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lawyer Portal - MAXLEGAL</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Advokat portal — MAXLEGAL</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-<div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6" id="loginCard">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h4 class="card-title">Advokat kirishi</h4>
-                    <form id="loginForm">
-                        <div class="mb-3">
-                            <label for="loginEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="loginEmail" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="loginPassword" class="form-label">Parol</label>
-                            <input type="password" class="form-control" id="loginPassword" required>
-                        </div>
-                        <button class="btn btn-primary w-100" id="loginBtn" type="submit">Kirish</button>
-                        <div class="alert alert-danger mt-3 d-none" id="loginError"></div>
-                    </form>
-                </div>
-            </div>
+<body class="lawyer-portal">
+  <div class="container py-5">
+    <div class="row g-4">
+      <!-- Login Card -->
+      <div class="col-lg-4" id="loginCol">
+        <div class="card shadow-sm" id="loginCard">
+          <div class="card-body">
+            <h4 class="card-title mb-3">Advokat kirishi</h4>
+            <form id="loginForm" novalidate>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="you@domain.uz" required>
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Parol</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="******" required>
+              </div>
+              <button class="btn btn-gradient w-100" id="loginBtn" type="submit">Kirish</button>
+              <div class="alert alert-danger mt-3 d-none" id="loginError"></div>
+            </form>
+            <hr>
+            <small class="text-muted">Agar siz advokat bo'lsangiz, o'z e-mailingiz va  parolingiz bilan kiring.</small>
+          </div>
         </div>
+      </div>
 
-        <div class="col-12 d-none" id="dashboard">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h3>Men uchun berilgan arizalar</h3>
-                <div>
-                    <button class="btn btn-outline-secondary me-2" id="logoutBtn">Chiqish</button>
-                    <span class="badge bg-secondary" id="lawyerEmail"></span>
-                </div>
+      <!-- Dashboard -->
+      <div class="col-lg-8 d-none" id="dashboard">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div>
+                <h4 class="mb-0">Arizalar paneli</h4>
+                <small class="text-muted">Logged in as <strong id="lawyerEmail"></strong></small>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-outline-secondary" id="refreshBtn">Yangilash</button>
+                <button class="btn btn-outline-danger" id="logoutBtn">Chiqish</button>
+              </div>
             </div>
 
-            <div id="messagesList" class="list-group"></div>
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="mb-2">Sizga tayinlanganlar</h6>
+                <div id="assignedList" class="list-group"></div>
+                <div id="assignedEmpty" class="text-muted mt-3 d-none">Sizga hali ariza tayinlanmagan.</div>
+              </div>
+
+              <div class="col-md-6">
+                <h6 class="mb-2">Mavjud (talab qilinadigan) arizalar</h6>
+                <div id="availableList" class="list-group"></div>
+                <div id="availableEmpty" class="text-muted mt-3 d-none">Hozircha o'zlashtirilmagan arizalar yo'q.</div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="/js/lawyer.js"></script>
+  <!-- Message modal -->
+  <div class="modal fade" id="msgModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="msgModalTitle">Ariza</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="msgModalBody"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="modalRespondBtn">Javob bergandi</button>
+          <button type="button" class="btn btn-danger" id="modalCloseBtn">Yopildi</button>
+          <button type="button" class="btn btn-outline-primary d-none" id="modalClaimBtn">O'zimga olish</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yopish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/lawyer.js"></script>
 </body>
 </html>

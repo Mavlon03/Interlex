@@ -28,6 +28,8 @@ public class LawyerController {
             Lawyer savedLawyer = lawyerService.createLawyer(dto);
             return ResponseEntity.status(HttpStatus.CREATED)
                     .body(ApiResponse.success("Advokat muvaffaqiyatli yaratildi", savedLawyer));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
         } catch (Exception e) {
             log.error("Error creating lawyer", e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)

@@ -1,5 +1,6 @@
 package uz.pdp.interlex.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -59,9 +60,9 @@ public class Lawyer {
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
-    public String getPassword() {
-        return "123";
-    }
+    @JsonIgnore
+    @Column(name = "password_hash", length = 100)
+    private String passwordHash;
 
     public enum LawyerStatus {
 

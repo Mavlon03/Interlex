@@ -23,6 +23,7 @@ public class AuthController {
     private final AuthenticationManager authenticationManager;
     private final JwtUtil jwtUtil;
     private final LawyerRepository lawyerRepository;
+    private final org.springframework.security.core.userdetails.UserDetailsService userDetailsService;
 
     @PostMapping("/login")
     public ResponseEntity<ApiResponse<Map<String, Object>>> login(@RequestBody Map<String, String> body) {
@@ -39,11 +40,7 @@ public class AuthController {
 
             Lawyer lawyer = optionalLawyer.get();
 
-            UserDetails userDetails = org.springframework.security.core.userdetails.User
-                    .withUsername(email)
-                    .password(lawyer.getPassword())
-                    .authorities("ROLE_LAWYER")
-                    .build();
+            UserDetails userDetails = userDetailsService.loadUserByUsername(email);
 
             String token = jwtUtil.generateToken(userDetails);
 

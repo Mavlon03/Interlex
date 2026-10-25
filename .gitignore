@@ -19,3 +19,10 @@ logs/
 
 # Temporary
 *.tmp
+
+# Sirlar
+application-local.properties
+*.env
+
+# deploy secrets (filled-in copies)
+deploy/.env

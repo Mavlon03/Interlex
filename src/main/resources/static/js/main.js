@@ -338,26 +338,29 @@ function initContactForm() {
   const phoneInput = document.getElementById('phone');
   if (phoneInput) {
     phoneInput.addEventListener('input', function() {
-      let value = this.value.replace(/\D/g, '');
+      // Prefiks doim +998; foydalanuvchi faqat 9 ta raqam kiritadi
+      let digits = this.value.replace(/\D/g, '');
 
-      // Auto-format to +998 format
-      if (value.startsWith('998')) {
-        value = '+' + value;
-      } else if (value.startsWith('99')) {
-        value = '+9' + value;
-      } else if (value.startsWith('9')) {
-        value = '+99' + value;
-      } else if (value.length > 0 && !value.startsWith('998')) {
-        value = '+998' + value;
+      // +998 bilan kiritilgan yoki qo'yilgan (paste) raqamdan prefiksni olib tashlaymiz
+      if (digits.startsWith('998')) {
+        digits = digits.substring(3);
+      } else if ('998'.startsWith(digits)) {
+        // Prefiksning bir qismigacha o'chirilgan (masalan "+99"): milliy qism bo'sh
+        digits = '';
       }
 
-      // Limit to +998XXXXXXXXX format (13 characters)
-      if (value.length > 13) {
-        value = value.substring(0, 13);
-      }
-
-      this.value = value;
+      this.value = '+998' + digits.substring(0, 9);
     });
+
+    // Kursor +998 prefiksi ichiga tushmasin
+    const keepCaretAfterPrefix = function() {
+      if (this.selectionStart < 4 && this.selectionStart === this.selectionEnd) {
+        this.setSelectionRange(this.value.length, this.value.length);
+      }
+    };
+    phoneInput.addEventListener('focus', keepCaretAfterPrefix);
+    phoneInput.addEventListener('click', keepCaretAfterPrefix);
+    phoneInput.addEventListener('keyup', keepCaretAfterPrefix);
 
     // Validate on blur
     phoneInput.addEventListener('blur', function() {

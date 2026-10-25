@@ -1608,3 +1608,17 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ===== LAWYER PORTAL STYLES ===== */
+.lawyer-portal .card { background: var(--bg-card); }
+.lawyer-portal #loginCard .card-body { padding: 1.6rem; }
+.lawyer-portal .list-group-item { cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.lawyer-portal .list-group-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.lawyer-portal .available-item .badge { margin-left: 8px; }
+.lawyer-portal .badge { font-weight: 600; }
+.lawyer-portal .modal-body p { margin-bottom: 0.6rem; }
+.lawyer-portal .text-muted.small { font-size: 0.85rem; }
+@media (max-width: 767px) {
+  .lawyer-portal #loginCol { order: 2; }
+  .lawyer-portal #dashboard { order: 1; }
+}

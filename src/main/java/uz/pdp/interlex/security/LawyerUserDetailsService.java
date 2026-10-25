@@ -40,11 +40,13 @@ public class LawyerUserDetailsService implements UserDetailsService {
         }
         authorities.add(new SimpleGrantedAuthority("ROLE_LAWYER"));
 
-        // Use getPassword() (placeholder) - in production replace with hashed password
+        // Parol o'rnatilmagan yoki nofaol advokat tizimga kira olmaydi
+        boolean hasPassword = lawyer.getPasswordHash() != null && !lawyer.getPasswordHash().isBlank();
         return User.builder()
                 .username(lawyer.getEmail())
-                .password(lawyer.getPassword())
+                .password(hasPassword ? lawyer.getPasswordHash() : "")
                 .authorities(authorities)
+                .disabled(!hasPassword || !Boolean.TRUE.equals(lawyer.getIsActive()))
                 .build();
     }
 }

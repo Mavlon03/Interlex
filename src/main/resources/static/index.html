@@ -876,49 +876,6 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
-<script>
-    document.getElementById("contactForm").addEventListener("submit", async function (e) {
-        e.preventDefault(); // sahifa reload bo'lishini oldini olamiz
-
-        // formadagi qiymatlarni olish
-        const data = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            phone: document.getElementById("phone").value,
-            serviceType: document.getElementById("serviceType").value,
-            clientType: document.getElementById("clientType").value,
-            subject: document.getElementById("subject").value,
-            message: document.getElementById("message").value,
-            langCode: "uz" // yoki navigator.language.substr(0, 2)
-        };
-
-        try {
-            const response = await axios.post('https://maxlegal.uz/api/contact', formData, {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            });
-
-            const result = await response.json();
-
-            if (response.ok && result.success) {
-                // Muvaffaqiyatli yuborildi
-                document.getElementById("successAlert").classList.remove("d-none");
-                document.getElementById("errorAlert").classList.add("d-none");
-                document.getElementById("contactForm").reset();
-            } else {
-                // Xatolik yuz berdi
-                document.getElementById("successAlert").classList.add("d-none");
-                document.getElementById("errorAlert").classList.remove("d-none");
-            }
-        } catch (error) {
-            console.error("Xatolik:", error);
-            document.getElementById("successAlert").classList.add("d-none");
-            document.getElementById("errorAlert").classList.remove("d-none");
-        }
-    });
-</script>
 
 </body>
 </html>

@@ -2,6 +2,7 @@ package uz.pdp.interlex.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import uz.pdp.interlex.dto.LawyerDto;
@@ -19,12 +20,21 @@ import java.util.Optional;
 public class LawyerService {
 
     private final LawyerRepository lawyerRepository;
+    private final PasswordEncoder passwordEncoder;
+
+    private static final int MIN_PASSWORD_LENGTH = 8;
 
     public Lawyer createLawyer(LawyerDto dto) {
         log.info("Creating new lawyer: {} {}", dto.getFirstName(), dto.getLastName());
 
+        String password = dto.getPassword();
+        if (password == null || password.length() < MIN_PASSWORD_LENGTH) {
+            throw new IllegalArgumentException("Parol kamida " + MIN_PASSWORD_LENGTH + " belgidan iborat bo'lishi kerak");
+        }
+
         Lawyer lawyer = Lawyer.builder()
                 .firstName(dto.getFirstName())
+                .passwordHash(passwordEncoder.encode(password))
                 .lastName(dto.getLastName())
                 .email(dto.getEmail())
                 .phone(dto.getPhone())
@@ -85,6 +95,13 @@ public class LawyerService {
         lawyer.setYearsOfExperience(dto.getYearsOfExperience());
         lawyer.setIsActive(dto.getIsActive());
         lawyer.setMaxCasesPerDay(dto.getMaxCasesPerDay());
+
+        if (dto.getPassword() != null && !dto.getPassword().isBlank()) {
+            if (dto.getPassword().length() < MIN_PASSWORD_LENGTH) {
+                throw new IllegalArgumentException("Parol kamida " + MIN_PASSWORD_LENGTH + " belgidan iborat bo'lishi kerak");
+            }
+            lawyer.setPasswordHash(passwordEncoder.encode(dto.getPassword()));
+        }
 
         Lawyer updatedLawyer = lawyerRepository.save(lawyer);
         log.info("Updated lawyer with ID: {}", id);

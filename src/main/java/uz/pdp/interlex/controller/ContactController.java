@@ -37,10 +37,11 @@ public class ContactController {
         log.info("Received contact message from: {}", dto.getEmail());
 
         try {
-            ContactMessage savedMessage = contactMessageService.createContactMessage(dto, request);
+            contactMessageService.createContactMessage(dto, request);
 
+            // Anonim mijozga saqlangan obyekt (IP, advokat ma'lumotlari) qaytarilmaydi
             return ResponseEntity.ok(
-                    ApiResponse.success("Xabaringiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanamiz.", savedMessage)
+                    ApiResponse.success("Xabaringiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanamiz.")
             );
         } catch (Exception e) {
             log.error("Error creating contact message", e);
@@ -53,6 +54,12 @@ public class ContactController {
     public ResponseEntity<ApiResponse<ContactMessage>> getContactMessage(@PathVariable Long id) {
         try {
             ContactMessage message = contactMessageService.findById(id);
+            var auth = org.springframework.security.core.context.SecurityContextHolder.getContext().getAuthentication();
+            boolean assignedToMe = message.getAssignedLawyer() != null
+                    && message.getAssignedLawyer().getId().equals(getAuthLawyerId(auth));
+            if (!isAdmin(auth) && !assignedToMe) {
+                return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ApiResponse.error("Access denied"));
+            }
             return ResponseEntity.ok(ApiResponse.success("Xabar topildi", message));
         } catch (Exception e) {
             log.error("Error finding contact message with id: {}", id, e);
@@ -201,6 +208,10 @@ public class ContactController {
         }
     }
 
+    private boolean isAdmin(org.springframework.security.core.Authentication auth) {
+        return auth != null && auth.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"));
+    }
+
     private Long getAuthLawyerId(org.springframework.security.core.Authentication auth) {
         try {
             String username = auth.getName();
@@ -217,6 +228,15 @@ public class ContactController {
             @PathVariable Long lawyerId) {
 
         try {
+            // Admin istalgan advokatga tayinlaydi; advokat faqat tayinlanmagan xabarni o'ziga oladi
+            var auth = org.springframework.security.core.context.SecurityContextHolder.getContext().getAuthentication();
+            if (!isAdmin(auth)) {
+                boolean self = lawyerId.equals(getAuthLawyerId(auth));
+                boolean unassigned = contactMessageService.findById(messageId).getAssignedLawyer() == null;
+                if (!self || !unassigned) {
+                    return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ApiResponse.error("Access denied"));
+                }
+            }
             ContactMessage updatedMessage = contactMessageService.assignToLawyer(messageId, lawyerId);
             return ResponseEntity.ok(ApiResponse.success("Xabar advokatga tayinlandi", updatedMessage));
         } catch (Exception e) {
