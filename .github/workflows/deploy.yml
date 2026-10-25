@@ -1,0 +1,169 @@
+name: Deploy
+
+# push to akmalov → build the image and deploy maxlegal.uz (GitHub environment "production").
+# Every server/domain detail is a GitHub variable or secret — see deploy/env.example.
+# Moving to another server or domain = changing those values, not this file.
+
+on:
+  push:
+    branches: [akmalov]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+env:
+  IMAGE_REPO: ${{ vars.DOCKERHUB_USERNAME }}/interlex
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: production
+      url: https://${{ vars.DOMAIN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check required settings
+        env:
+          SERVER_HOST: ${{ vars.SERVER_HOST }}
+          DOMAIN: ${{ vars.DOMAIN }}
+          APP_PORT: ${{ vars.APP_PORT }}
+          DB_PORT: ${{ vars.DB_PORT }}
+          DOCKERHUB_USERNAME: ${{ vars.DOCKERHUB_USERNAME }}
+          ADMIN_EMAIL: ${{ vars.ADMIN_EMAIL }}
+          HAS_KEY: ${{ secrets.SSH_PRIVATE_KEY != '' }}
+          HAS_HUB: ${{ secrets.DOCKERHUB_TOKEN != '' }}
+          HAS_DB: ${{ secrets.DB_PASSWORD != '' }}
+          HAS_JWT: ${{ secrets.JWT_SECRET != '' }}
+          HAS_ADMIN: ${{ secrets.ADMIN_PASSWORD != '' }}
+        run: |
+          missing=()
+          for v in SERVER_HOST DOMAIN APP_PORT DB_PORT DOCKERHUB_USERNAME ADMIN_EMAIL; do [ -n "${!v}" ] || missing+=("var $v"); done
+          [ "$HAS_KEY" = true ]   || missing+=("secret SSH_PRIVATE_KEY")
+          [ "$HAS_HUB" = true ]   || missing+=("secret DOCKERHUB_TOKEN")
+          [ "$HAS_DB" = true ]    || missing+=("secret DB_PASSWORD")
+          [ "$HAS_JWT" = true ]   || missing+=("secret JWT_SECRET")
+          [ "$HAS_ADMIN" = true ] || missing+=("secret ADMIN_PASSWORD")
+          if [ ${#missing[@]} -gt 0 ]; then
+            echo "::error::'production' environment is missing: ${missing[*]}"; exit 1
+          fi
+
+      - name: Image tags
+        id: tags
+        run: |
+          echo "image=$IMAGE_REPO:prod" >> "$GITHUB_OUTPUT"
+          echo "pinned=$IMAGE_REPO:prod-${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
+
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ steps.tags.outputs.image }}
+            ${{ steps.tags.outputs.pinned }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Write .env
+        env:
+          V_IMAGE: ${{ steps.tags.outputs.pinned }}
+          V_APP_PORT: ${{ vars.APP_PORT }}
+          V_DB_PORT: ${{ vars.DB_PORT }}
+          V_DB_NAME: ${{ vars.DB_NAME || 'interlex_db' }}
+          V_DB_USERNAME: ${{ vars.DB_USERNAME || 'interlex' }}
+          V_DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          V_MAIL_USERNAME: ${{ vars.MAIL_USERNAME }}
+          V_MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          V_JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          V_ENCRYPTION_KEY: ${{ secrets.APP_ENCRYPTION_KEY }}
+          V_ADMIN_EMAIL: ${{ vars.ADMIN_EMAIL }}
+          V_ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          V_DDL_AUTO: ${{ vars.DDL_AUTO || 'update' }}
+          V_DOMAIN: ${{ vars.DOMAIN }}
+        run: |
+          put() {
+            case "$2" in *"'"*) echo "::error::$1 must not contain a single quote"; exit 1 ;; esac
+            printf "%s='%s'\n" "$1" "$2" >> .env.deploy
+          }
+          : > .env.deploy
+          put COMPOSE_PROJECT_NAME   interlex
+          put IMAGE                  "$V_IMAGE"
+          put APP_PORT               "$V_APP_PORT"
+          put DB_PORT                "$V_DB_PORT"
+          put DB_NAME                "$V_DB_NAME"
+          put DB_USERNAME            "$V_DB_USERNAME"
+          put DB_PASSWORD            "$V_DB_PASSWORD"
+          put SPRING_MAIL_USERNAME   "$V_MAIL_USERNAME"
+          put SPRING_MAIL_PASSWORD   "$V_MAIL_PASSWORD"
+          put JWT_SECRET             "$V_JWT_SECRET"
+          put APP_ENCRYPTION_KEY     "$V_ENCRYPTION_KEY"
+          put APP_ADMIN_EMAIL        "$V_ADMIN_EMAIL"
+          put APP_ADMIN_PASSWORD     "$V_ADMIN_PASSWORD"
+          put APP_CORS_ALLOWED_ORIGINS "https://$V_DOMAIN,https://www.$V_DOMAIN"
+          put DDL_AUTO               "$V_DDL_AUTO"
+
+      - name: SSH setup
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+          SERVER_HOST: ${{ vars.SERVER_HOST }}
+          SERVER_PORT: ${{ vars.SERVER_SSH_PORT || '22' }}
+        run: |
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key && chmod 600 ~/.ssh/deploy_key
+          if [ -n "$SSH_KNOWN_HOSTS" ]; then
+            printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          else
+            ssh-keyscan -p "$SERVER_PORT" -H "$SERVER_HOST" > ~/.ssh/known_hosts 2>/dev/null
+          fi
+
+      - name: Deploy to server
+        env:
+          SERVER_HOST: ${{ vars.SERVER_HOST }}
+          SERVER_USER: ${{ vars.SERVER_USER || 'root' }}
+          SERVER_PORT: ${{ vars.SERVER_SSH_PORT || '22' }}
+          DOCKERHUB_USERNAME: ${{ vars.DOCKERHUB_USERNAME }}
+          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+        run: |
+          DIR="/opt/interlex"
+          SSH="ssh -i ~/.ssh/deploy_key -p $SERVER_PORT $SERVER_USER@$SERVER_HOST"
+          SCP="scp -i ~/.ssh/deploy_key -P $SERVER_PORT"
+
+          $SSH "test -d $DIR" || { echo "::error::$DIR yo'q — avval deploy/scripts/setup-server.sh ni ishga tushiring"; exit 1; }
+          $SCP deploy/docker-compose.yml "$SERVER_USER@$SERVER_HOST:$DIR/docker-compose.yml"
+          $SCP .env.deploy "$SERVER_USER@$SERVER_HOST:$DIR/.env"
+          $SSH "chmod 600 $DIR/.env"
+
+          printf '%s' "$DOCKERHUB_TOKEN" | $SSH "docker login -u '$DOCKERHUB_USERNAME' --password-stdin >/dev/null"
+          $SSH "cd $DIR && docker compose --env-file .env pull app \
+                && docker compose --env-file .env up -d --remove-orphans"
+          # remove only old Interlex images; images of running containers cannot be removed, other projects are not touched
+          $SSH "docker images '$IMAGE_REPO' --format '{{.ID}}' | sort -u | xargs -r docker rmi >/dev/null 2>&1 || true"
+
+          echo "Waiting for the app to become healthy..."
+          for i in $(seq 1 40); do
+            STATUS=$($SSH "cd $DIR && docker inspect --format '{{.State.Health.Status}}' \$(docker compose --env-file .env ps -q app)" 2>/dev/null || true)
+            echo "  [$i] $STATUS"
+            [ "$STATUS" = healthy ] && exit 0
+            [ "$STATUS" = unhealthy ] && break
+            sleep 6
+          done
+          echo "::error::app is not healthy — last logs:"
+          $SSH "cd $DIR && docker compose --env-file .env logs --tail=150 app"
+          exit 1
+
+      - name: Public check
+        run: curl -fsS --retry 5 --retry-delay 5 -o /dev/null "https://${{ vars.DOMAIN }}/"
+
+      - name: Cleanup
+        if: always()
+        run: rm -f ~/.ssh/deploy_key .env.deploy

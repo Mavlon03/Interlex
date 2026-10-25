@@ -1,0 +1,59 @@
+# Interlex (maxlegal.uz): Spring Boot app + its own PostgreSQL.
+# Everything server-specific lives in .env next to this file; the CI deploy job writes it
+# from GitHub variables/secrets (see deploy/env.example).
+#
+#   docker compose --env-file .env up -d
+#
+# COMPOSE_PROJECT_NAME (interlex) prefixes containers, network and volumes, so nothing
+# collides with other projects on the shared server.
+
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      TZ: Asia/Tashkent
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    # only reachable from this host (e.g. through an SSH tunnel), never from outside
+    ports:
+      - "127.0.0.1:${DB_PORT}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USERNAME} -d ${DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    mem_limit: ${DB_MEM_LIMIT:-384m}
+
+  app:
+    image: ${IMAGE}
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file: .env
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SERVER_ADDRESS: 0.0.0.0
+      SERVER_PORT: 8080
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/${DB_NAME}
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+      # no migrations in this project: Hibernate creates/extends the schema (it never drops columns)
+      SPRING_JPA_HIBERNATE_DDL_AUTO: ${DDL_AUTO:-update}
+      JAVA_OPTS: ${JAVA_OPTS:--Xms128m -Xmx384m -XX:+ExitOnOutOfMemoryError}
+    # nginx on the host proxies maxlegal.uz to this port
+    ports:
+      - "127.0.0.1:${APP_PORT}:8080"
+    mem_limit: ${APP_MEM_LIMIT:-640m}
+    logging:
+      driver: json-file
+      options:
+        max-size: "20m"
+        max-file: "5"
+
+volumes:
+  db-data:

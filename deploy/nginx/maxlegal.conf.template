@@ -1,0 +1,74 @@
+# Interlex (maxlegal.uz). Rendered by deploy/scripts/setup-server.sh with envsubst.
+#   ${DOMAIN}    — main host (maxlegal.uz); www.${DOMAIN} redirects to it
+#   ${APP_PORT}  — Interlex container on 127.0.0.1
+# The certificate for ${DOMAIN} + www.${DOMAIN} is issued by certbot (setup-server.sh does it if missing).
+
+map $http_upgrade $connection_upgrade_interlex {
+    default upgrade;
+    ''      close;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name ${DOMAIN} www.${DOMAIN};
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/html;
+    }
+
+    location / {
+        return 301 https://${DOMAIN}$request_uri;
+    }
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name www.${DOMAIN};
+
+    ssl_certificate     /etc/letsencrypt/live/${DOMAIN}/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    return 301 https://${DOMAIN}$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name ${DOMAIN};
+
+    ssl_certificate     /etc/letsencrypt/live/${DOMAIN}/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    client_max_body_size 10m;
+
+    add_header Strict-Transport-Security "max-age=31536000" always;
+    add_header X-Content-Type-Options nosniff always;
+    add_header X-Frame-Options SAMEORIGIN always;
+
+    location /ws {
+        proxy_pass http://127.0.0.1:${APP_PORT};
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $connection_upgrade_interlex;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 3600s;
+    }
+
+    location / {
+        proxy_pass http://127.0.0.1:${APP_PORT};
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        # replace any client-sent X-Forwarded-For (IP spoofing)
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Host $host;
+    }
+}

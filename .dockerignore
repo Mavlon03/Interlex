@@ -1,0 +1,11 @@
+target/
+.git/
+.github/
+.idea/
+.vscode/
+.mvn/
+deploy/
+*.iml
+*.log
+.env
+src/main/resources/application-local.properties
